@@ -6,7 +6,8 @@
 <br>
 
 <div align="center">
-  <p style="font-size: 30px"> 🚧  WORK IN PROGRESS 🚧  </p>
+  <hr />
+  <h1> 🚧  WORK IN PROGRESS 🚧  </h1>
 </div>
 
 ## Details
