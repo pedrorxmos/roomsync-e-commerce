@@ -14,6 +14,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ProductListPageComponent } from './pages/product-list-page/product-list-page.component';
 import { ProductDetailPageComponent } from './pages/product-detail-page/product-detail-page.component';
 import { CartPageComponent } from './pages/cart-page/cart-page.component';
+import { CategoryComponent } from './components/ui/category/category.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { CartPageComponent } from './pages/cart-page/cart-page.component';
     HomePageComponent,
     ProductListPageComponent,
     ProductDetailPageComponent,
-    CartPageComponent
+    CartPageComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,
