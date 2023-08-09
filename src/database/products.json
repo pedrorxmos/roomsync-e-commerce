@@ -1,0 +1,610 @@
+[
+  {
+    "id": "grey-wood-chair",
+    "name": "Grey Wood Chair",
+    "category": "furniture",
+    "subcategory": "chairs",
+    "price": 59.99,
+    "stars": 4.2,
+    "info": {
+      "description": "A grey woody chair exudes timeless elegance, blending the warmth of wood with a sleek, neutral grey finish. Its minimalist design and sturdy construction provide both comfort and style, making it a perfect addition to any modern or classic interior setting.",
+      "measures": {
+        "width": "64cm",
+        "height": "75cm",
+        "depth": "75cm"
+      }
+    }
+  },
+  {
+    "id": "green-cactus-vase",
+    "name": "Green Cactus Vase",
+    "category": "decor",
+    "subcategory": "bowls-vases",
+    "price": 15.99,
+    "stars": 4.9,
+    "info": {
+      "description": "This charming vase brings a touch of the arid outdoors into your living space, creating a striking focal point that blends artistry and nature in perfect harmony.",
+      "measures": {
+        "width": "21cm",
+        "height": "24cm",
+        "depth": "10cm"
+      }
+    }
+  },
+  {
+    "id": "dark-grey-sofa",
+    "name": "Dark Grey Sofa",
+    "category": "furniture",
+    "subcategory": "sofas",
+    "price": 599.99,
+    "stars": 4.5,
+    "info": {
+      "description": "The dark grey sofa exudes contemporary sophistication, boasting a plush yet sleek design that seamlessly complements any interior. Its understated elegance and versatile color make it a timeless centerpiece for modern living spaces.",
+      "measures": {
+        "width": "164cm",
+        "height": "78cm",
+        "depth": "89cm"
+      }
+    }
+  },
+  {
+    "id": "white-plastic-chair",
+    "name": "White Plastic Chair",
+    "category": "furniture",
+    "subcategory": "chairs",
+    "price": 39.99,
+    "stars": 5,
+    "info": {
+      "description": "A white basic chair embodies minimalist purity, featuring clean lines and a neutral hue that effortlessly integrates into diverse decor schemes. Its simplicity offers both functionality and a serene aesthetic, making it an essential element for any understated setting.",
+      "measures": {
+        "width": "52cm",
+        "height": "87cm",
+        "depth": "50cm"
+      }
+    }
+  },
+  {
+    "id": "wood-selfunit",
+    "name": "Wood Self Unit",
+    "category": "furniture",
+    "subcategory": "organization",
+    "price": 58.99,
+    "stars": 4.8,
+    "info": {
+      "description": "The wooden shelf unit harmoniously blends form and function, showcasing the natural beauty of wood while providing ample storage and display space for your belongings. Its rustic charm and versatile design make it an inviting addition to any room.",
+      "measures": {
+        "width": "77cm",
+        "height": "147cm",
+        "depth": "39cm"
+      }
+    }
+  },
+  {
+    "id": "hand-decoration",
+    "name": "Hand Decoration",
+    "category": "decor",
+    "subcategory": "decoration",
+    "price": 14.99,
+    "stars": 4.2,
+    "info": {
+      "description": "The wooden hand sculpture stands as a testament to craftsmanship, its intricate design capturing both elegance and artistry.",
+      "measures": {
+        "width": "18cm",
+        "height": "30cm",
+        "depth": "15cm"
+      }
+    }
+  },
+  {
+    "id": "yellow-kids-stool",
+    "name": "Yellow Kids Stool",
+    "category": "furniture",
+    "subcategory": "chairs",
+    "price": 21.99,
+    "stars": 4.0,
+    "info": {
+      "description": "The yellow kids stool radiates playful charm, providing a vibrant and functional seating solution perfectly sized for young adventurers.",
+      "measures": {
+        "width": "19cm",
+        "height": "23cm",
+        "depth": "19cm"
+      }
+    }
+  },
+  {
+    "id": "sun-decoration",
+    "name": "Sun Decoration",
+    "category": "decor",
+    "subcategory": "decoration",
+    "price": 15.99,
+    "stars": 3.9,
+    "info": {
+      "description": "The little sun decoration infuses spaces with a cheerful radiance, spreading warmth and positivity through its whimsical design.",
+      "measures": {
+        "width": "10cm",
+        "height": "26cm",
+        "depth": "10cm"
+      }
+    }
+  },
+  {
+    "id": "plant-3-pack",
+    "name": "Plant 3 Pack",
+    "category": "decor",
+    "subcategory": "plants",
+    "price": 3.49,
+    "stars": 4.5,
+    "info": {
+      "description": "The 3-pack of mini artificial plants brings a touch of nature's tranquility into any corner, offering low-maintenance greenery that lasts without compromise.",
+      "measures": {
+        "width": "6cm",
+        "height": "12cm",
+        "depth": "6cm"
+      }
+    }
+  },
+  {
+    "id": "palm-plant",
+    "name": "Palm Plant",
+    "category": "decor",
+    "subcategory": "plants",
+    "price": 59.99,
+    "stars": 4.6,
+    "info": {
+      "description": "The medium palm plant transforms spaces into lush havens, its graceful fronds adding a tropical allure that captures the essence of relaxation.",
+      "measures": {
+        "width": "23cm",
+        "height": "170cm",
+        "depth": "23cm"
+      }
+    }
+  },
+  {
+    "id": "red-selfunit",
+    "name": "Red Self Unit",
+    "category": "furniture",
+    "subcategory": "organization",
+    "price": 129.99,
+    "stars": 4.7,
+    "info": {
+      "description": "The industrial red shelf unit combines bold aesthetics with functionality, showcasing a vibrant red finish and robust design that adds a pop of color and contemporary flair to your space. Its versatile shelves offer ample storage while exuding a rugged, urban charm.",
+      "measures": {
+        "width": "95cm",
+        "height": "100cm",
+        "depth": "46cm"
+      }
+    }
+  },
+  {
+    "id": "white-wood-desk",
+    "name": "White Wood Desk",
+    "category": "furniture",
+    "subcategory": "desks-tables",
+    "price": 169.49,
+    "stars": 4.8,
+    "info": {
+      "description": "The white wooden desk blends timeless elegance with practicality, providing a clean and versatile workspace that harmonizes effortlessly with any decor.",
+      "measures": {
+        "width": "160cm",
+        "height": "78cm",
+        "depth": "80cm"
+      }
+    }
+  },
+  {
+    "id": "black-wood-desk",
+    "name": "Black Wood Desk",
+    "category": "furniture",
+    "subcategory": "desks-tables",
+    "price": 119.49,
+    "stars": 4.7,
+    "info": {
+      "description": "The black wood desk emanates sleek sophistication and functionality, offering a modern workspace that effortlessly complements diverse interior styles.",
+      "measures": {
+        "width": "120cm",
+        "height": "73cm",
+        "depth": "60cm"
+      }
+    }
+  },
+  {
+    "id": "white-chair-outdoor",
+    "name": "White Chair Outdoor",
+    "category": "furniture",
+    "subcategory": "outdoors",
+    "price": 269.99,
+    "stars": 5,
+    "info": {
+      "description": "The white outdoor chair invites relaxation in the open air, its crisp hue and durable design combining to create a serene and stylish seating option for alfresco moments.",
+      "measures": {
+        "width": "81cm",
+        "height": "76cm",
+        "depth": "78cm"
+      }
+    }
+  },
+  {
+    "id": "white-chaise-outdoor",
+    "name": "White Chaise Outdoor",
+    "category": "furniture",
+    "subcategory": "outdoors",
+    "price": 213.99,
+    "stars": 4.5,
+    "info": {
+      "description": "The white outdoor chaise lounge redefines outdoor comfort, inviting you to unwind in luxurious style while basking in the sun's embrace, creating a serene oasis of relaxation.",
+      "measures": {
+        "width": "67cm",
+        "height": "35cm",
+        "depth": "193cm"
+      }
+    }
+  },
+  {
+    "id": "wood-bench-outdoor",
+    "name": "Wood Bench Outdoor",
+    "category": "furniture",
+    "subcategory": "outdoors",
+    "price": 89.99,
+    "stars": 3.8,
+    "info": {
+      "description": "The outdoor wood bench harmonizes with nature, providing a rustic yet inviting seating solution that complements outdoor surroundings and offers a timeless spot to unwind.",
+      "measures": {
+        "width": "106cm",
+        "height": "78cm",
+        "depth": "62cm"
+      }
+    }
+  },
+  {
+    "id": "white-sofa-outdoor",
+    "name": "White Sofa Outdoor",
+    "category": "furniture",
+    "subcategory": "outdoors",
+    "price": 499.99,
+    "stars": 3.8,
+    "info": {
+      "description": "The white outdoor sofa epitomizes relaxation and elegance, offering a comfortable and stylish haven for outdoor lounging and gatherings, enhancing the beauty of your outdoor living space.",
+      "measures": {
+        "width": "160cm",
+        "height": "72cm",
+        "depth": "80cm"
+      }
+    }
+  },
+  {
+    "id": "black-drawer",
+    "name": "Black Drawer",
+    "category": "furniture",
+    "subcategory": "organization",
+    "price": 199.99,
+    "stars": 4.2,
+    "info": {
+      "description": "The black drawer exudes modern sophistication, seamlessly combining practical storage with a sleek design that enhances organization while making a bold statement in any room.",
+      "measures": {
+        "width": "95cm",
+        "height": "56cm",
+        "depth": "46cm"
+      }
+    }
+  },
+  {
+    "id": "black-armless-chair",
+    "name": "Black Armless Chair",
+    "category": "furniture",
+    "subcategory": "chairs",
+    "price": 54.99,
+    "stars": 4.6,
+    "info": {
+      "description": "The black armless chair epitomizes sleek minimalism, offering a chic and versatile seating option that effortlessly complements various interior styles while maximizing comfort and space.",
+      "measures": {
+        "width": "40cm",
+        "height": "88cm",
+        "depth": "42cm"
+      }
+    }
+  },
+  {
+    "id": "blue-clear-chair",
+    "name": "Blue Clear Chair",
+    "category": "furniture",
+    "subcategory": "chairs",
+    "price": 40.99,
+    "stars": 4.2,
+    "info": {
+      "description": "The blue clear chair adds a pop of vibrant color and contemporary transparency to your space, combining modern aesthetics with comfort in a unique and visually striking design.",
+      "measures": {
+        "width": "38cm",
+        "height": "84cm",
+        "depth": "40cm"
+      }
+    }
+  },
+  {
+    "id": "grass-plant",
+    "name": "Grass Plant",
+    "category": "decor",
+    "subcategory": "plants",
+    "price": 29.99,
+    "stars": 4.7,
+    "info": {
+      "description": "The grass plant introduces a touch of nature indoors, housing a lush and verdant display that brings the outdoors to your living space, infusing it with a refreshing and calming ambiance.",
+      "measures": {
+        "width": "20cm",
+        "height": "32cm",
+        "depth": "20cm"
+      }
+    }
+  },
+  {
+    "id": "monstera-plant",
+    "name": "Monstera Plant",
+    "category": "decor",
+    "subcategory": "plants",
+    "price": 49.49,
+    "stars": 4.8,
+    "info": {
+      "description": "The monstera plant showcases tropical elegance, its iconic split leaves and lush growth adding a touch of exotic beauty and natural charm to your interior décor.",
+      "measures": {
+        "width": "21cm",
+        "height": "38cm",
+        "depth": "21cm"
+      }
+    }
+  },
+  {
+    "id": "black-loveseat",
+    "name": "Black Loveseat",
+    "category": "furniture",
+    "subcategory": "sofas",
+    "price": 359.89,
+    "stars": 4.7,
+    "info": {
+      "description": "The black loveseat exudes sophistication and coziness, offering a compact and stylish seating solution that's perfect for intimate conversations and comfortable lounging in modern or classic interiors.",
+      "measures": {
+        "width": "118cm",
+        "height": "80cm",
+        "depth": "85cm"
+      }
+    }
+  },
+  {
+    "id": "gold-flower-bowl",
+    "name": "Gold Flower Bowl",
+    "category": "decor",
+    "subcategory": "bowls-vases",
+    "price": 25.99,
+    "stars": 4.5,
+    "info": {
+      "description": "The gold flower bowl exudes opulence and artistry, serving as a striking centerpiece that beautifully showcases your floral arrangements while adding a touch of luxury and elegance to your space.",
+      "measures": {
+        "width": "30cm",
+        "height": "15cm",
+        "depth": "30cm"
+      }
+    }
+  },
+  {
+    "id": "iris-vase",
+    "name": "Iris Vase",
+    "category": "decor",
+    "subcategory": "bowls-vases",
+    "price": 29.99,
+    "stars": 4.6,
+    "info": {
+      "description": "The iris vase captures the delicate beauty of nature, its graceful design providing an exquisite display for your floral arrangements, infusing your home with timeless charm and artistic allure.",
+      "measures": {
+        "width": "35cm",
+        "height": "21cm",
+        "depth": "20cm"
+      }
+    }
+  },
+  {
+    "id": "bike-decoration",
+    "name": "Bike Decoration",
+    "category": "decor",
+    "subcategory": "decoration",
+    "price": 16.99,
+    "stars": 4.1,
+    "info": {
+      "description": "The little bike decoration brings a playful and charming element to your space, evoking a sense of nostalgia and adventure while adding a whimsical touch to your décor.",
+      "measures": {
+        "width": "23cm",
+        "height": "15cm",
+        "depth": "5cm"
+      }
+    }
+  },
+  {
+    "id": "hourglass",
+    "name": "Hourglass",
+    "category": "decor",
+    "subcategory": "decoration",
+    "price": 8.99,
+    "stars": 4.8,
+    "info": {
+      "description": "The hourglass stands as a captivating embodiment of time's passage, its graceful form and flowing sands offering both visual appeal and a meditative reminder of the fleeting nature of moments.",
+      "measures": {
+        "width": "23cm",
+        "height": "15cm",
+        "depth": "5cm"
+      }
+    }
+  },
+  {
+    "id": "grey-sofa",
+    "name": "Grey Sofa",
+    "category": "furniture",
+    "subcategory": "sofas",
+    "price": 349.99,
+    "stars": 4.2,
+    "info": {
+      "description": "The grey sofa radiates modern elegance, blending neutral tones with sleek lines to create a versatile and inviting centerpiece that effortlessly complements various interior styles.",
+      "measures": {
+        "width": "164cm",
+        "height": "84cm",
+        "depth": "85cm"
+      }
+    }
+  },
+  {
+    "id": "bouquet-plant",
+    "name": "Bouquet Plant",
+    "category": "decor",
+    "subcategory": "plants",
+    "price": 4.49,
+    "stars": 4.2,
+    "info": {
+      "description": "The brown bouquet weaves together earthy tones and natural beauty, creating a warm and rustic floral arrangement that celebrates the richness of the outdoors and adds a cozy touch to your space.",
+      "measures": {
+        "width": "4cm",
+        "height": "28cm",
+        "depth": "3cm"
+      }
+    }
+  },
+  {
+    "id": "green-stool",
+    "name": "Green Stool",
+    "category": "furniture",
+    "subcategory": "chairs",
+    "price": 19.99,
+    "stars": 4.4,
+    "info": {
+      "description": "The green stool infuses a fresh pop of color and contemporary flair, providing a versatile and stylish seating option that seamlessly integrates into your interior while adding a vibrant touch.",
+      "measures": {
+        "width": "36cm",
+        "height": "50cm",
+        "depth": "40cm"
+      }
+    }
+  },
+  {
+    "id": "black-armchair",
+    "name": "Black Armchair",
+    "category": "furniture",
+    "subcategory": "chairs",
+    "price": 109.99,
+    "stars": 4.5,
+    "info": {
+      "description": "The black armchair exudes timeless sophistication, offering a comfortable and elegant seating choice that effortlessly enhances the aesthetics of any room, whether modern or classic.",
+      "measures": {
+        "width": "60cm",
+        "height": "98cm",
+        "depth": "64cm"
+      }
+    }
+  },
+  {
+    "id": "white-desk",
+    "name": "White Desk",
+    "category": "furniture",
+    "subcategory": "desks-tables",
+    "price": 129.49,
+    "stars": 3.9,
+    "info": {
+      "description": "The white desktop embodies clean minimalism, providing a spacious and pristine work surface that promotes focus and creativity while seamlessly blending into a variety of interior design schemes.",
+      "measures": {
+        "width": "164cm",
+        "height": "78cm",
+        "depth": "68cm"
+      }
+    }
+  },
+  {
+    "id": "wood-sidetable",
+    "name": "Wood Sidetable",
+    "category": "furniture",
+    "subcategory": "desks-tables",
+    "price": 39.99,
+    "stars": 4.4,
+    "info": {
+      "description": "The wood side table exudes natural charm, combining the warmth of wood grain with functional design to create a versatile and rustic-inspired accent piece that complements your living space.",
+      "measures": {
+        "width": "66cm",
+        "height": "60cm",
+        "depth": "66cm"
+      }
+    }
+  },
+  {
+    "id": "green-vase",
+    "name": "Green Vase",
+    "category": "decor",
+    "subcategory": "bowls-vases",
+    "price": 17.99,
+    "stars": 4.3,
+    "info": {
+      "description": "The green translucent vase merges artistry with a hint of mystery, casting a soft glow and creating a captivating showcase for your floral arrangements, infusing your room with a subtle, ethereal ambiance.",
+      "measures": {
+        "width": "28cm",
+        "height": "32cm",
+        "depth": "28cm"
+      }
+    }
+  },
+  {
+    "id": "black-bowl",
+    "name": "Black Bowl",
+    "category": "decor",
+    "subcategory": "bowls-vases",
+    "price": 9.99,
+    "stars": 4.3,
+    "info": {
+      "description": "The black wired bowl intertwines form and function, featuring a modern design that elegantly organizes and displays your items while adding a sleek and contemporary touch to your décor.",
+      "measures": {
+        "width": "28cm",
+        "height": "15cm",
+        "depth": "28cm"
+      }
+    }
+  },
+  {
+    "id": "black-bookcase",
+    "name": "Black Bookcase",
+    "category": "furniture",
+    "subcategory": "organization",
+    "price": 34.49,
+    "stars": 4.6,
+    "info": {
+      "description": "The black bookcase melds practicality with style, offering ample storage for your literary treasures while exuding a sleek and modern aesthetic that enhances the organization and aesthetics of your space.",
+      "measures": {
+        "width": "46cm",
+        "height": "167cm",
+        "depth": "32cm"
+      }
+    }
+  },
+  {
+    "id": "White Drawer",
+    "name": "White Drawer",
+    "category": "furniture",
+    "subcategory": "organization",
+    "price": 48.99,
+    "stars": 3.7,
+    "info": {
+      "description": "The white drawer combines simplicity and utility, providing a clean and versatile storage solution that seamlessly integrates into your décor while keeping your belongings organized and easily accessible.",
+      "measures": {
+        "width": "102cm",
+        "height": "76cm",
+        "depth": "48cm"
+      }
+    }
+  },
+  {
+    "id": "black-table",
+    "name": "Black Table",
+    "category": "furniture",
+    "subcategory": "desks-tables",
+    "price": 89.49,
+    "stars": 4.4,
+    "info": {
+      "description": "The black table exudes timeless elegance, offering a versatile and stylish surface that complements a range of interior styles, whether as a functional centerpiece or an accent piece.",
+      "measures": {
+        "width": "165cm",
+        "height": "76cm",
+        "depth": "64cm"
+      }
+    }
+  }
+]
