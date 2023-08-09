@@ -18,7 +18,9 @@ import {
   ProductListPageComponent,
   ProductDetailPageComponent,
   CartPageComponent
-} from './pages'
+} from './pages';
+import { ButtonComponent } from './components/ui/button/button.component';
+import { IconComponent } from './components/ui/icon/icon.component'
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import {
     ProductListPageComponent,
     ProductSliderComponent,
     StarsRateComponent,
-    TopbarComponent
+    TopbarComponent,
+    ButtonComponent,
+    IconComponent
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
