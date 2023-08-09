@@ -1,0 +1,20 @@
+small,
+.text-small {
+  margin: 0;
+  font-size: size(xsm);
+  font-weight: 400;
+}
+
+p,
+.text-default {
+  margin: 0;
+  font-size: size(md);
+  font-weight: 400;
+}
+
+big,
+.text-big {
+  margin: 0;
+  font-size: size(xlg);
+  font-weight: 400;
+}
