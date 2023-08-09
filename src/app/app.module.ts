@@ -10,6 +10,10 @@ import { ProductSliderComponent } from './components/product/product-slider/prod
 import { CartItemComponent } from './components/cart/cart-item/cart-item.component';
 import { DropdownComponent } from './components/ui/dropdown/dropdown.component';
 import { StarsRateComponent } from './components/ui/stars-rate/stars-rate.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
+import { ProductListPageComponent } from './pages/product-list-page/product-list-page.component';
+import { ProductDetailPageComponent } from './pages/product-detail-page/product-detail-page.component';
+import { CartPageComponent } from './pages/cart-page/cart-page.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { StarsRateComponent } from './components/ui/stars-rate/stars-rate.compon
     ProductSliderComponent,
     CartItemComponent,
     DropdownComponent,
-    StarsRateComponent
+    StarsRateComponent,
+    HomePageComponent,
+    ProductListPageComponent,
+    ProductDetailPageComponent,
+    CartPageComponent
   ],
   imports: [
     BrowserModule,
