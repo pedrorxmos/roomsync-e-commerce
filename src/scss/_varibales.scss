@@ -1,0 +1,39 @@
+// COLORS
+
+$black: #0e0e0e;
+$grey1: #3c3c3c;
+$grey2: #6d6d6d;
+$grey3: #9d9d9d;
+$grey4: #9d9d9d;
+$grey5: #ebebeb;
+$white: #fafafa;
+$pure-white: #ffffff;
+
+$ash1: #829d93;
+$ash2: #adc2b5;
+$ash3: #e3ede7;
+
+$red: #e66c6c;
+$orange: #e6a354;
+$green: #8bbe6f;
+$blue: #56b5de;
+$purple: #947acb;
+$pink: #de94cd;
+$yellow: #cdcf58;
+$grey: #7a7a7a;
+
+// FONTS
+
+$font-family: 'Urbanist', sans-serif;
+$default-font-size: 16px;
+
+$size-map: (
+  /* small */ xsm: 0.75,
+  /* h6 */ sm: 0.833,
+  /* default & h5 */ md: 1,
+  /* h4 */ lg: 1.2,
+  /* big */ xlg: 1.25,
+  /* h3 */ bg: 1.44,
+  /* h2 */ xbg: 1.728,
+  /* h1 */ huge: 2.074
+);

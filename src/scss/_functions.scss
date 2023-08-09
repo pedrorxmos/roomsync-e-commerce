@@ -1,0 +1,3 @@
+@function size($size-name) {
+  @return map-get($size-map, $size-name) * $default-font-size;
+}
