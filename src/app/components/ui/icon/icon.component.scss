@@ -1,0 +1,20 @@
+.icon {
+  stroke-width: 2;
+  display: block;
+  z-index: inherit;
+
+  &-sm {
+    width: 20px;
+    height: 20px;
+  }
+
+  &-md {
+    width: 24px;
+    height: 24px;
+  }
+
+  &-lg {
+    width: 32px;
+    height: 32px;
+  }
+}

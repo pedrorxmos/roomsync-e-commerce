@@ -3,7 +3,8 @@ import {
   ElementRef,
   Input,
   ViewChild,
-  AfterViewInit
+  AfterViewInit,
+  Inject
 } from '@angular/core'
 import { innerSvg } from './svg.icons'
 
@@ -25,13 +26,15 @@ export class IconComponent implements AfterViewInit {
   @Input()
   public className?: string
 
-  public inlineClass = `icon icon-${this.size} feather feather-airplay ${
-    this.className ? this.className : ''
-  }`
+  public inlineClass: string = ''
 
   @ViewChild('icon') iconElement!: ElementRef
 
   ngAfterViewInit(): void {
+    this.inlineClass = `icon icon-${this.size} feather feather-airplay ${
+      this.className ? this.className : ''
+    }`
+
     this.iconElement.nativeElement.innerHTML = `${
       this.title ? `<title>${this.title}</title>` : ''
     }${innerSvg.filter((svg) => svg.name === this.name)[0].value}`
