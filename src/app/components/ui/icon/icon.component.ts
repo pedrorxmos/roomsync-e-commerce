@@ -13,14 +13,14 @@ import { innerSvg } from './svg.icons'
   styleUrls: ['./icon.component.scss']
 })
 export class IconComponent implements AfterViewInit {
-  @Input()
-  public name: string = 'arrow-down'
+  @Input({ required: true })
+  public name!: string
 
   @Input()
   public title?: string
 
-  @Input()
-  public size: string = 'md'
+  @Input({ required: true })
+  public size!: string
 
   @Input()
   public className?: string
