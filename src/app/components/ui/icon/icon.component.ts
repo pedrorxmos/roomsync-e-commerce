@@ -40,7 +40,7 @@ export class IconComponent implements AfterViewInit, OnInit {
   }
 
   ngOnInit(): void {
-    this.inlineClass = `icon icon-${this.size} feather feather-airplay ${
+    this.inlineClass = `icon icon-${this.size} feather feather-${this.name} ${
       this.className ? this.className : ''
     }`
   }

@@ -1,11 +1,11 @@
-import { Component, Input } from '@angular/core'
+import { Component, Input, OnInit } from '@angular/core'
 
 @Component({
   selector: 'app-button',
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss']
 })
-export class ButtonComponent {
+export class ButtonComponent implements OnInit {
   @Input({ required: true })
   public type!: string
 
@@ -29,4 +29,12 @@ export class ButtonComponent {
 
   @Input({ alias: 'class' })
   public className?: string
+
+  public inlineClass: string = ''
+
+  ngOnInit(): void {
+    this.inlineClass = `btn btn-${this.type} btn-${this.size} ${
+      this.className ? this.className : ''
+    }`
+  }
 }
