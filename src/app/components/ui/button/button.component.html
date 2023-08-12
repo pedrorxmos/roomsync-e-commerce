@@ -1,0 +1,13 @@
+<button *ngIf="isLink === undefined" [class]="inlineClass" (click)="action()">
+  <ng-container *ngTemplateOutlet="btnValue"></ng-container>
+</button>
+
+<a *ngIf="isLink !== undefined" [routerLink]="url" [class]="inlineClass">
+  <ng-container *ngTemplateOutlet="btnValue"></ng-container>
+</a>
+
+<ng-template #btnValue>
+  <app-icon *ngIf="leftIcon !== undefined" [name]="leftIcon" [size]="size" />
+  <ng-content></ng-content>
+  <app-icon *ngIf="rightIcon !== undefined" [name]="rightIcon" [size]="size" />
+</ng-template>

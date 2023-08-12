@@ -1,0 +1,37 @@
+@import '../../../../scss/varibales';
+@import '../../../../scss/functions';
+@import '../../../../scss/mixins';
+
+.btn {
+  @include d-flex(row, 0.5rem);
+  text-decoration: none;
+  justify-content: center;
+  font-family: $font-family;
+  border: 2px solid $ash1;
+  border-radius: 16px;
+
+  &-primary {
+    background-color: $ash1;
+    color: $white;
+  }
+
+  &-secondary {
+    background-color: transparent;
+    color: $grey2;
+  }
+
+  &-sm {
+    font-size: size(md);
+    padding: 12px;
+  }
+
+  &-md {
+    font-size: size(xlg);
+    padding: 14px;
+  }
+
+  &-lg {
+    font-size: size(bg);
+    padding: 16px;
+  }
+}

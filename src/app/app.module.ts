@@ -4,25 +4,28 @@ import { BrowserModule } from '@angular/platform-browser'
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 import {
-  TopbarComponent,
+  ButtonComponent,
+  CartItemComponent,
+  CategoryComponent,
+  DropdownComponent,
   FooterComponent,
+  IconComponent,
   ProductCardComponent,
   ProductSliderComponent,
-  CartItemComponent,
-  DropdownComponent,
   StarsRateComponent,
-  CategoryComponent
+  TopbarComponent
 } from './components'
 import {
+  CartPageComponent,
   HomePageComponent,
-  ProductListPageComponent,
   ProductDetailPageComponent,
-  CartPageComponent
+  ProductListPageComponent
 } from './pages'
 
 @NgModule({
   declarations: [
     AppComponent,
+    ButtonComponent,
     CartItemComponent,
     CartPageComponent,
     CategoryComponent,
@@ -34,7 +37,8 @@ import {
     ProductListPageComponent,
     ProductSliderComponent,
     StarsRateComponent,
-    TopbarComponent
+    TopbarComponent,
+    IconComponent
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
