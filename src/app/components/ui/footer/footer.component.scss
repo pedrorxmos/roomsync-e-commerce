@@ -1,0 +1,107 @@
+@import '../../../../scss/varibales';
+@import '../../../../scss/functions';
+@import '../../../../scss/mixins';
+
+.footer {
+  background-color: $ash1;
+  width: 100%;
+  color: $white;
+
+  .footer-container {
+    @include d-flex(column, 32px);
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 24px $mobile-padding;
+    max-width: $desktop-max-width;
+    margin: 0 auto;
+
+    @include mq(min-width, $mobile-max-mq) {
+      padding-left: $tablet-padding;
+      padding-right: $tablet-padding;
+      max-width: $tablet-max-width;
+    }
+
+    @include mq(min-width, $tablet-max-mq) {
+      gap: 24px;
+      flex-direction: row;
+      padding-left: $desktop-padding;
+      padding-right: $desktop-padding;
+      max-width: $desktop-max-width;
+    }
+
+    .footer-section {
+      @include d-flex(column, 12px);
+      align-items: center;
+      width: 100%;
+
+      &.footer-copyright {
+        @include mq(min-width, $tablet-max-mq) {
+          align-items: flex-start;
+        }
+
+        .copyright-header {
+          @include d-flex(row, 8px);
+          align-items: center;
+        }
+
+        .copyright-social-media {
+          @include d-flex(row, 12px);
+        }
+      }
+
+      &.footer-newsletter {
+        .newsletter-input {
+          color: $pure-white;
+          background-color: darken($ash2, 3);
+          width: 100%;
+          max-width: 320px;
+          padding: 10px 12px;
+          border: none;
+          border-radius: 36px;
+          text-align: center;
+          font-family: $font-family;
+          font-size: size(md);
+
+          &:focus {
+            border: none;
+            outline: none;
+            background-color: darken($ash2, 6);
+          }
+
+          &::placeholder {
+            /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: $ash3;
+            opacity: 1; /* Firefox */
+          }
+
+          &:-ms-input-placeholder {
+            /* Internet Explorer 10-11 */
+            color: $ash3;
+          }
+
+          &::-ms-input-placeholder {
+            /* Microsoft Edge */
+            color: $ash3;
+          }
+        }
+      }
+
+      &.footer-nav {
+        padding-top: 1rem;
+        font-size: 10px;
+
+        @include mq(min-width, $tablet-max-mq) {
+          align-items: flex-end;
+          justify-content: flex-end;
+        }
+        .nav-list {
+          @include d-flex(row, 12px);
+          @include mq(min-width, $tablet-max-mq) {
+            align-items: flex-end;
+            justify-content: flex-end;
+          }
+        }
+      }
+    }
+  }
+}
