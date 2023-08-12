@@ -1,6 +1,23 @@
 <header class="topbar">
-  <h1 class="topbar-logo">RoomSync</h1>
+  <span class="topbar-logo h3">RoomSync</span>
   <div class="topbar-search">
-    <div class="search-wrapper"></div>
+    <label for="search" class="search-wrapper">
+      <app-icon name="search" size="sm" class="search-icon" />
+      <input type="text" name="search" id="search" class="search-input" />
+    </label>
   </div>
+  <nav class="topbar-nav">
+    <ul class="nav-list">
+      <li class="nav-item" routerLink="shop">
+        <app-icon name="book-open" size="sm" title="catalog" />
+        <span> Catalog</span>
+      </li>
+      <li class="nav-item" routerLink="favorites">
+        <app-icon name="heart" size="sm" title="favorites" />
+      </li>
+      <li class="nav-item" routerLink="cart">
+        <app-icon name="shopping-cart" size="sm" title="cart" />
+      </li>
+    </ul>
+  </nav>
 </header>

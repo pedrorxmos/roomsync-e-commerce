@@ -18,6 +18,7 @@ const routes: Routes = [
     ]
   },
   { path: 'product/:id', component: ProductDetailPageComponent },
+  { path: 'favorites', component: ProductListPageComponent },
   { path: 'cart', component: CartPageComponent },
   { path: '**', redirectTo: '' }
 ]
