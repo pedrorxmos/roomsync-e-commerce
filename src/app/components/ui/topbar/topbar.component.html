@@ -16,19 +16,42 @@
     </div>
     <nav class="topbar-nav">
       <ul class="nav-list">
+        <li class="nav-item nav-action nav-action__search">
+          <app-icon
+            name="search"
+            size="sm"
+            title="catalog"
+            class="nav-item__icon"
+          />
+        </li>
         <li class="nav-item" routerLink="shop">
-          <app-icon name="book-open" size="sm" title="catalog" />
-          <span> Catalog</span>
+          <app-icon
+            name="book-open"
+            size="sm"
+            title="catalog"
+            class="nav-item__icon"
+          />
+          <span class="nav-item__title">Catalog</span>
         </li>
         <li
           class="nav-item nav-item__after"
           attr-content="18"
           routerLink="favorites"
         >
-          <app-icon name="heart" size="sm" title="favorites" />
+          <app-icon
+            name="heart"
+            size="sm"
+            title="favorites"
+            class="nav-item__icon"
+          />
         </li>
         <li class="nav-item nav-item__after" attr-content="4" routerLink="cart">
-          <app-icon name="shopping-cart" size="sm" title="cart" />
+          <app-icon
+            name="shopping-cart"
+            size="sm"
+            title="cart"
+            class="nav-item__icon"
+          />
         </li>
       </ul>
     </nav>

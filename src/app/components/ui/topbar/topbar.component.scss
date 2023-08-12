@@ -3,16 +3,35 @@
 @import '../../../../scss/mixins';
 
 .topbar {
-  background: $white;
+  background-color: $white;
   color: $black;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 999;
 
   .topbar-container {
-    @include d-flex(row, 32px);
-    justify-content: stretch;
+    @include d-flex(row, 0);
+    justify-content: space-between;
     align-items: center;
-    padding: 24px $desktop-padding;
+    padding: 24px $mobile-padding;
     max-width: $desktop-max-width;
     margin: 0 auto;
+    z-index: inherit;
+    background-color: $white;
+
+    @include mq(min-width, $mobile-max-mq) {
+      gap: 32px;
+      padding-left: $tablet-padding;
+      padding-right: $tablet-padding;
+      max-width: $tablet-max-width;
+    }
+
+    @include mq(min-width, $tablet-max-mq) {
+      padding-left: $desktop-padding;
+      padding-right: $desktop-padding;
+      max-width: $desktop-max-width;
+    }
 
     .topbar-logo {
       cursor: pointer;
@@ -20,6 +39,22 @@
 
     .topbar-search {
       flex: 1;
+      background-color: $white;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 4px $mobile-padding;
+      z-index: -1;
+      position: absolute;
+
+      &.open {
+        top: 100%;
+        left: 0;
+      }
+
+      @include mq(min-width, $mobile-max-mq) {
+        display: block;
+      }
 
       .search-wrapper {
         @include d-flex(row, 1rem);
@@ -27,7 +62,7 @@
         color: $grey2;
         justify-content: flex-start;
         align-items: center;
-        padding: 10px 12px;
+        padding: 8px 12px;
         border-radius: 40px;
         cursor: text;
 
@@ -48,12 +83,24 @@
 
     .topbar-nav {
       .nav-list {
-        @include d-flex(row, 24px);
+        @include d-flex(row, 20px);
 
         .nav-item {
           @include d-flex(row, 4px);
           cursor: pointer;
           position: relative;
+
+          &.nav-action {
+            &__search {
+              @include mq(min-width, $mobile-max-mq) {
+                display: none;
+              }
+            }
+          }
+
+          &__title {
+            display: none;
+          }
 
           &__after {
             &::after {
@@ -62,12 +109,12 @@
               justify-content: center;
               align-items: center;
               position: absolute;
-              top: -12px;
-              right: -12px;
+              top: -10px;
+              right: -10px;
               background-color: lighten($ash1, 07);
               color: $white;
-              min-width: 14px;
-              height: 14px;
+              min-width: 18px;
+              height: 18px;
               border-radius: 6px;
               padding: 2px;
               font-weight: 600;
