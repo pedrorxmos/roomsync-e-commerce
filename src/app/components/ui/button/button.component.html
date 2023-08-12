@@ -1,12 +1,12 @@
 <button
   *ngIf="isLink === undefined"
   [class]="'btn ' + isLink"
-  (onClick)="(action)"
+  (click)="action()"
 >
   <ng-container *ngTemplateOutlet="btnValue"></ng-container>
 </button>
 
-<a *ngIf="isLink !== undefined" [routerLink]="action">
+<a *ngIf="isLink !== undefined" [routerLink]="url">
   <ng-container *ngTemplateOutlet="btnValue"></ng-container>
 </a>
 

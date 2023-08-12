@@ -15,8 +15,11 @@ export class ButtonComponent {
   @Input({ alias: 'link' })
   public isLink?: string
 
-  @Input({ required: true })
-  public action!: any
+  @Input()
+  public url!: string
+
+  @Input()
+  public action!: (args?: any) => any
 
   @Input()
   public leftIcon?: string

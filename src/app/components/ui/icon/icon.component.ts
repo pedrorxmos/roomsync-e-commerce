@@ -4,7 +4,10 @@ import {
   Input,
   ViewChild,
   AfterViewInit,
-  Inject
+  Inject,
+  OnInit,
+  AfterContentChecked,
+  AfterContentInit
 } from '@angular/core'
 import { innerSvg } from './svg.icons'
 
@@ -13,7 +16,7 @@ import { innerSvg } from './svg.icons'
   templateUrl: './icon.component.html',
   styleUrls: ['./icon.component.scss']
 })
-export class IconComponent implements AfterViewInit {
+export class IconComponent implements AfterViewInit, OnInit {
   @Input({ required: true })
   public name!: string
 
@@ -31,12 +34,14 @@ export class IconComponent implements AfterViewInit {
   @ViewChild('icon') iconElement!: ElementRef
 
   ngAfterViewInit(): void {
-    this.inlineClass = `icon icon-${this.size} feather feather-airplay ${
-      this.className ? this.className : ''
-    }`
-
     this.iconElement.nativeElement.innerHTML = `${
       this.title ? `<title>${this.title}</title>` : ''
     }${innerSvg.filter((svg) => svg.name === this.name)[0].value}`
+  }
+
+  ngOnInit(): void {
+    this.inlineClass = `icon icon-${this.size} feather feather-airplay ${
+      this.className ? this.className : ''
+    }`
   }
 }
