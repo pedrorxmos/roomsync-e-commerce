@@ -6,6 +6,7 @@
   @include d-flex(row, 0.5rem);
   text-decoration: none;
   justify-content: center;
+  align-items: center;
   font-family: $font-family;
   border: 2px solid $ash1;
   border-radius: 16px;
@@ -33,5 +34,19 @@
   &-lg {
     font-size: size(bg);
     padding: 16px;
+  }
+
+  &-d {
+    &sm {
+      padding: 12px 24px;
+    }
+
+    &md {
+      padding: 14px 28px;
+    }
+
+    &lg {
+      padding: 16px 32px;
+    }
   }
 }

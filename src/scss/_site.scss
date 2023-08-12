@@ -9,3 +9,26 @@ body {
   background-color: $white;
   font-family: $font-family;
 }
+
+main {
+  @include d-flex(column, 32px);
+  justify-content: stretch;
+  align-items: stretch;
+  padding: 24px $mobile-padding;
+  max-width: $desktop-max-width;
+  margin: 0 auto;
+
+  @include mq(min-width, $mobile-max-mq) {
+    padding-left: $tablet-padding;
+    padding-right: $tablet-padding;
+    max-width: $tablet-max-width;
+  }
+
+  @include mq(min-width, $tablet-max-mq) {
+    gap: 24px;
+    flex-direction: row;
+    padding-left: $desktop-padding;
+    padding-right: $desktop-padding;
+    max-width: $desktop-max-width;
+  }
+}

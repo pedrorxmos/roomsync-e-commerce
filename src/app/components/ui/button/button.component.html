@@ -7,7 +7,11 @@
 </a>
 
 <ng-template #btnValue>
-  <app-icon *ngIf="leftIcon !== undefined" [name]="leftIcon" [size]="size" />
+  <app-icon *ngIf="leftIcon !== undefined" [name]="leftIcon" [size]="svgSize" />
   <ng-content></ng-content>
-  <app-icon *ngIf="rightIcon !== undefined" [name]="rightIcon" [size]="size" />
+  <app-icon
+    *ngIf="rightIcon !== undefined"
+    [name]="rightIcon"
+    [size]="svgSize"
+  />
 </ng-template>

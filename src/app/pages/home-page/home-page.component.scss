@@ -1,0 +1,74 @@
+@import '../../../scss/varibales';
+@import '../../../scss/functions';
+@import '../../../scss/mixins';
+
+.home-header {
+  @include d-flex(row, 12px);
+  align-items: stretch;
+  justify-content: stretch;
+
+  .header-section {
+    @include d-flex(column, 12px);
+    flex: 1;
+    justify-content: center;
+    align-items: flex-start;
+
+    &.header-hero {
+      gap: 32px;
+
+      .header-header {
+        @include d-flex(column, 0);
+        align-items: flex-start;
+        justify-content: center;
+
+        .header-title {
+          font-size: 8.75vw;
+          font-weight: 600;
+          margin: -1.38vw 0px;
+          color: $ash2;
+        }
+
+        .header-subtitle {
+          font-weight: 600;
+          font-size: 3.35vw;
+          text-transform: uppercase;
+          color: $black;
+        }
+      }
+    }
+
+    &.header-miscellaneous {
+      flex: 0.85;
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 1 / 1;
+
+      .misc-section {
+        height: calc(50% - 6px);
+
+        &__container {
+          border-radius: 3.3333vw;
+          background-color: $ash2;
+        }
+
+        &__bottom {
+          @include d-flex(row, 12px);
+          width: 100%;
+
+          &__left,
+          &__right {
+            width: 100%;
+            flex: 1;
+          }
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+}
