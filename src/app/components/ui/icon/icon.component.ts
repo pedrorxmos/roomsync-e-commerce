@@ -26,7 +26,7 @@ export class IconComponent implements AfterViewInit, OnInit {
   @Input({ required: true })
   public size!: string
 
-  @Input()
+  @Input({ alias: 'class' })
   public className?: string
 
   public inlineClass: string = ''
