@@ -1,7 +1,7 @@
 <header class="topbar">
   <div class="topbar-container">
     <span class="topbar-logo h3" routerLink="">RoomSync</span>
-    <div class="topbar-search">
+    <div #searchBar class="topbar-search">
       <label for="search" class="search-wrapper">
         <app-icon name="search" size="sm" class="search-icon" />
         <input
@@ -16,7 +16,10 @@
     </div>
     <nav class="topbar-nav">
       <ul class="nav-list">
-        <li class="nav-item nav-action nav-action__search">
+        <li
+          class="nav-item nav-action nav-action__search"
+          (click)="onToggleSearch()"
+        >
           <app-icon
             name="search"
             size="sm"
