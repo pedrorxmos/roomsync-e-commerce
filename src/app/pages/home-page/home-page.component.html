@@ -1,1 +1,52 @@
-<p>home-page works!</p>
+<main>
+  <header class="home-header">
+    <div class="header-section header-hero">
+      <div class="header-header">
+        <h1 class="header-title">RoomSync</h1>
+        <h2 class="header-subtitle">Need a change?</h2>
+      </div>
+      <app-button type="primary" size="dmd" link url="shop"
+        >Shop Now</app-button
+      >
+    </div>
+    <div class="header-section header-miscellaneous">
+      <img
+        src="../../../assets/img/hero.webp"
+        alt=""
+        class="misc-section misc-section__top misc-section__container"
+      />
+      <div class="misc-section misc-section__bottom">
+        <div class="misc-section__bottom__left misc-section__container"></div>
+        <img
+          src="../../../assets/img/hero2.webp"
+          alt=""
+          class="misc-section__bottom__right misc-section__container"
+        />
+      </div>
+    </div>
+  </header>
+  <section class="main-section home-products">
+    <header class="section-header">
+      <h2>Best Sellers</h2>
+      <small>Our best selling products</small>
+    </header>
+
+    <app-product-slider></app-product-slider>
+  </section>
+
+  <section class="main-section home-categories">
+    <header class="section-header">
+      <h2>Categories</h2>
+    </header>
+    <div class="categories-list">
+      <app-category></app-category>
+      <app-category></app-category>
+      <app-category></app-category>
+      <app-category></app-category>
+      <app-category></app-category>
+      <app-category></app-category>
+      <app-category></app-category>
+      <app-category></app-category>
+    </div>
+  </section>
+</main>

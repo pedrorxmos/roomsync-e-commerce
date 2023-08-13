@@ -9,3 +9,40 @@ body {
   background-color: $white;
   font-family: $font-family;
 }
+
+main {
+  @include d-flex(column, 24px);
+  justify-content: stretch;
+  align-items: stretch;
+  padding: 24px $mobile-padding;
+  max-width: $desktop-max-width;
+  margin: 0 auto;
+  min-height: calc(100dvh - 75.2px);
+
+  @include mq(min-width, $mobile-max-mq) {
+    gap: 32px;
+    padding-left: $tablet-padding;
+    padding-right: $tablet-padding;
+    max-width: $tablet-max-width;
+    min-height: calc(100dvh - 80px);
+  }
+
+  @include mq(min-width, $tablet-max-mq) {
+    gap: 40px;
+    padding-left: $desktop-padding;
+    padding-right: $desktop-padding;
+    max-width: $desktop-max-width;
+  }
+
+  .main-section {
+    @include d-flex(column, 24px);
+
+    @include mq(min-width, $mobile-max-mq) {
+      gap: 32px;
+    }
+
+    @include mq(min-width, $tablet-max-mq) {
+      gap: 40px;
+    }
+  }
+}

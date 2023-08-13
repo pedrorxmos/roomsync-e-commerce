@@ -31,10 +31,13 @@ export class ButtonComponent implements OnInit {
   public className?: string
 
   public inlineClass: string = ''
+  public svgSize: string = 'md'
 
   ngOnInit(): void {
     this.inlineClass = `btn btn-${this.type} btn-${this.size} ${
       this.className ? this.className : ''
     }`
+
+    this.svgSize = this.size.slice(-2)
   }
 }
