@@ -39,14 +39,7 @@
       <h2>Categories</h2>
     </header>
     <div class="categories-list">
-      <app-category></app-category>
-      <app-category></app-category>
-      <app-category></app-category>
-      <app-category></app-category>
-      <app-category></app-category>
-      <app-category></app-category>
-      <app-category></app-category>
-      <app-category></app-category>
+      <app-category [category]="category" *ngFor="let category of categories" />
     </div>
   </section>
 </main>

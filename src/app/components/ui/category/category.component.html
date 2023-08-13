@@ -1,1 +1,21 @@
-<p>category works!</p>
+<a
+  [class]="'category-card category-' + category.id"
+  [routerLink]="'shop/' + category.id"
+>
+  <div class="card-info">
+    <h3 class="h4 card-title">{{ category.name }}</h3>
+    <span class="card-subtitle">{{ category.parent }}</span>
+  </div>
+  <div class="card-icon">
+    <svg
+      #svg
+      width="300"
+      height="300"
+      viewBox="0 0 300 300"
+      fill="currentColor"
+      fill-rule="evenodd"
+      class="card-icon__svg"
+      xmlns="http://www.w3.org/2000/svg"
+    ></svg>
+  </div>
+</a>

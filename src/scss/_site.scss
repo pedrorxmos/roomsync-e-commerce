@@ -14,23 +14,21 @@ main {
   @include d-flex(column, 24px);
   justify-content: stretch;
   align-items: stretch;
-  padding: 24px $mobile-padding;
+  padding: 40px $mobile-padding;
   max-width: $desktop-max-width;
   margin: 0 auto;
   min-height: calc(100dvh - 75.2px);
 
   @include mq(min-width, $mobile-max-mq) {
     gap: 32px;
-    padding-left: $tablet-padding;
-    padding-right: $tablet-padding;
+    padding: 40px $tablet-padding;
     max-width: $tablet-max-width;
     min-height: calc(100dvh - 80px);
   }
 
   @include mq(min-width, $tablet-max-mq) {
     gap: 40px;
-    padding-left: $desktop-padding;
-    padding-right: $desktop-padding;
+    padding: 48px $desktop-padding 64px;
     max-width: $desktop-max-width;
   }
 
