@@ -1,10 +1,42 @@
 [
-  "sofas",
-  "chairs",
-  "desks-tables",
-  "organization",
-  "outdoors",
-  "decoration",
-  "bowls-vases",
-  "plants"
+  {
+    "id": "sofas",
+    "name": "Sofas",
+    "parent": "furniture"
+  },
+  {
+    "id": "chairs",
+    "name": "Chairs & stools",
+    "parent": "furniture"
+  },
+  {
+    "id": "desks-tables",
+    "name": "Desks & tables",
+    "parent": "furniture"
+  },
+  {
+    "id": "organization",
+    "name": "Organization",
+    "parent": "furniture"
+  },
+  {
+    "id": "outdoors",
+    "name": "Outdoor",
+    "parent": "furniture"
+  },
+  {
+    "id": "decoration",
+    "name": "Decoration",
+    "parent": "decor"
+  },
+  {
+    "id": "bowls-vases",
+    "name": "Bowls & vases",
+    "parent": "decor"
+  },
+  {
+    "id": "plants",
+    "name": "Plants",
+    "parent": "decor"
+  }
 ]

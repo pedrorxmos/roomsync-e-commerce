@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core'
+import { Category } from 'src/app/interfaces'
 
 @Component({
   selector: 'app-category',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./category.component.scss']
 })
 export class CategoryComponent {
-
+  @Input({ required: true })
+  public category!: Category
 }
