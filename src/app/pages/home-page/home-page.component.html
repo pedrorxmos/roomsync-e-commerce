@@ -1,24 +1,32 @@
-<header class="home-header">
-  <div class="header-section header-hero">
-    <div class="header-header">
-      <h1 class="header-title">RoomSync</h1>
-      <h2 class="header-subtitle">Need a change?</h2>
+<main>
+  <header class="home-header">
+    <div class="header-section header-hero">
+      <div class="header-header">
+        <h1 class="header-title">RoomSync</h1>
+        <h2 class="header-subtitle">Need a change?</h2>
+      </div>
+      <app-button type="primary" size="dmd" link url="shop"
+        >Shop Now</app-button
+      >
     </div>
-    <app-button type="primary" size="dmd" link url="shop">Shop Now</app-button>
-  </div>
-  <div class="header-section header-miscellaneous">
-    <img
-      src="../../../assets/img/hero.webp"
-      alt=""
-      class="misc-section misc-section__top misc-section__container"
-    />
-    <div class="misc-section misc-section__bottom">
-      <div class="misc-section__bottom__left misc-section__container"></div>
+    <div class="header-section header-miscellaneous">
       <img
-        src="../../../assets/img/hero2.webp"
+        src="../../../assets/img/hero.webp"
         alt=""
-        class="misc-section__bottom__right misc-section__container"
+        class="misc-section misc-section__top misc-section__container"
       />
+      <div class="misc-section misc-section__bottom">
+        <div class="misc-section__bottom__left misc-section__container"></div>
+        <img
+          src="../../../assets/img/hero2.webp"
+          alt=""
+          class="misc-section__bottom__right misc-section__container"
+        />
+      </div>
     </div>
-  </div>
-</header>
+  </header>
+  <section class="home-products">
+    <h2>Best Sellers</h2>
+    <app-product-slider></app-product-slider>
+  </section>
+</main>
