@@ -1,0 +1,38 @@
+@import '../../../../scss/varibales';
+@import '../../../../scss/functions';
+@import '../../../../scss/mixins';
+
+.category-card {
+  @include d-flex(row, 0);
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 3.3333vw;
+  background-color: $red;
+  color: $white;
+  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.1);
+
+  .card-info {
+    padding: 32px 56px;
+
+    .card-subtitle {
+      text-transform: capitalize;
+    }
+  }
+
+  .card-icon {
+    @include d-flex();
+    align-items: center;
+    justify-content: center;
+    background-color: $pure-white;
+    border-radius: 3.2vw;
+    height: 124px;
+    width: 124px;
+    color: $red;
+    box-shadow: inset 4px 2px 4px rgba(0, 0, 0, 0.1);
+
+    &__svg {
+      width: 80px;
+      height: 80px;
+    }
+  }
+}
