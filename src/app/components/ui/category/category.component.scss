@@ -9,7 +9,7 @@
   border-radius: 3.3333vw;
   background-color: $red;
   color: $white;
-  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 4px 10px rgba($black, 0.1);
 
   .card-info {
     padding-left: 32px;
@@ -34,7 +34,7 @@
     height: 72px;
     width: 72px;
     color: $red;
-    box-shadow: inset 4px 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 4px 2px 4px rgba($black, 0.1);
 
     @include mq(min-width, $mobile-max-mq) {
       height: 90px;
@@ -58,6 +58,137 @@
       @include mq(min-width, 1110px) {
         width: 80px;
         height: 80px;
+      }
+    }
+  }
+
+  &:hover {
+    background-color: darken($red, 5);
+
+    .card-icon {
+      color: darken($red, 5);
+    }
+  }
+
+  &.category- {
+    &sofas {
+      background-color: $red;
+
+      .card-icon {
+        color: $red;
+      }
+
+      &:hover {
+        background-color: darken($red, 5);
+
+        .card-icon {
+          color: darken($red, 5);
+        }
+      }
+    }
+    &chairs {
+      background-color: $orange;
+
+      .card-icon {
+        color: $orange;
+      }
+
+      &:hover {
+        background-color: darken($orange, 5);
+
+        .card-icon {
+          color: darken($orange, 5);
+        }
+      }
+    }
+    &desks-tables {
+      background-color: $purple;
+
+      .card-icon {
+        color: $purple;
+      }
+
+      &:hover {
+        background-color: darken($purple, 5);
+
+        .card-icon {
+          color: darken($purple, 5);
+        }
+      }
+    }
+    &organization {
+      background-color: $grey;
+
+      .card-icon {
+        color: $grey;
+      }
+
+      &:hover {
+        background-color: darken($grey, 5);
+
+        .card-icon {
+          color: darken($grey, 5);
+        }
+      }
+    }
+    &outdoors {
+      background-color: $green;
+
+      .card-icon {
+        color: $green;
+      }
+
+      &:hover {
+        background-color: darken($green, 5);
+
+        .card-icon {
+          color: darken($green, 5);
+        }
+      }
+    }
+    &decoration {
+      background-color: $blue;
+
+      .card-icon {
+        color: $blue;
+      }
+
+      &:hover {
+        background-color: darken($blue, 5);
+
+        .card-icon {
+          color: darken($blue, 5);
+        }
+      }
+    }
+    &bowls-vases {
+      background-color: $pink;
+
+      .card-icon {
+        color: $pink;
+      }
+
+      &:hover {
+        background-color: darken($pink, 5);
+
+        .card-icon {
+          color: darken($pink, 5);
+        }
+      }
+    }
+    &plants {
+      background-color: $yellow;
+
+      .card-icon {
+        color: $yellow;
+      }
+
+      &:hover {
+        background-color: darken($yellow, 5);
+
+        .card-icon {
+          color: darken($yellow, 5);
+        }
       }
     }
   }
