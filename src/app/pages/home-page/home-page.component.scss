@@ -3,18 +3,29 @@
 @import '../../../scss/mixins';
 
 .home-header {
-  @include d-flex(row, 12px);
+  @include d-flex(column, 40px);
   align-items: stretch;
   justify-content: stretch;
+
+  @include mq(min-width, $tablet-max-mq) {
+    flex-direction: row;
+    gap: 12px;
+  }
 
   .header-section {
     @include d-flex(column, 12px);
     flex: 1;
+    width: 100%;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+
+    @include mq(min-width, $tablet-max-mq) {
+      align-items: flex-start;
+    }
 
     &.header-hero {
       gap: 32px;
+      width: 100%;
 
       .header-header {
         @include d-flex(column, 0);
@@ -22,43 +33,133 @@
         justify-content: center;
 
         .header-title {
-          font-size: 8.75vw;
+          font-size: 16.39vw;
           font-weight: 600;
           margin: -1.38vw 0px;
           color: $ash2;
+
+          @include mq(min-width, $mobile-max-mq) {
+            font-size: 13.85vw;
+          }
+
+          @include mq(min-width, $tablet-max-mq) {
+            font-size: 8.75vw;
+          }
         }
 
         .header-subtitle {
           font-weight: 600;
-          font-size: 3.35vw;
+          font-size: 6.16vw;
           text-transform: uppercase;
           color: $black;
+
+          @include mq(min-width, $mobile-max-mq) {
+            font-size: 5.25vw;
+          }
+
+          @include mq(min-width, $tablet-max-mq) {
+            font-size: 3.35vw;
+          }
         }
       }
     }
 
     &.header-miscellaneous {
-      flex: 0.85;
       width: 100%;
-      height: 100%;
+      height: calc(100vw - $mobile-padding * 2);
       aspect-ratio: 1 / 1;
+
+      @include mq(min-width, $mobile-max-mq) {
+        align-items: stretch;
+        flex-direction: row;
+        height: calc(40vw - $tablet-padding * 2);
+        aspect-ratio: 12 / 1;
+        margin: 0;
+      }
+
+      @include mq(min-width, $tablet-max-mq) {
+        justify-content: flex-end;
+        flex-direction: column;
+        // width: 85%;
+        flex: 0.8;
+        height: 100%;
+
+        aspect-ratio: 1 / 1;
+      }
 
       .misc-section {
         height: calc(50% - 6px);
+
+        @include mq(min-width, $mobile-max-mq) {
+          height: calc(100% - 6px);
+        }
+
+        @include mq(min-width, $tablet-max-mq) {
+          height: calc(50% - 6px);
+        }
 
         &__container {
           border-radius: 3.3333vw;
           background-color: $ash2;
         }
 
+        &__top {
+          width: 100%;
+          flex: 1;
+
+          @include mq(min-width, $mobile-max-mq) {
+            width: 80%;
+          }
+
+          @include mq(min-width, $tablet-max-mq) {
+            width: 100%;
+            flex: 1;
+          }
+        }
+
         &__bottom {
           @include d-flex(row, 12px);
           width: 100%;
+          flex: 1;
 
-          &__left,
-          &__right {
+          @include mq(min-width, $mobile-max-mq) {
+            width: 20%;
+            flex: 0.6;
+          }
+
+          @include mq(min-width, $tablet-max-mq) {
             width: 100%;
             flex: 1;
+          }
+
+          &__left {
+            width: 40%;
+            flex: 0.4;
+
+            @include mq(min-width, $mobile-max-mq) {
+              width: 20%;
+              flex: 1;
+            }
+
+            @include mq(min-width, $tablet-max-mq) {
+              width: 40%;
+              flex: 0.4;
+            }
+          }
+
+          &__right {
+            width: 60%;
+            flex: 0.6;
+
+            @include mq(min-width, $mobile-max-mq) {
+              width: 80%;
+              flex: 1;
+            }
+
+            @include mq(min-width, $tablet-max-mq) {
+              width: 60%;
+              flex: 0.6;
+            }
           }
         }
       }
