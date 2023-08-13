@@ -38,14 +38,17 @@
 
   &-d {
     &sm {
+      font-size: size(md);
       padding: 12px 24px;
     }
 
     &md {
+      font-size: size(xlg);
       padding: 14px 28px;
     }
 
     &lg {
+      font-size: size(bg);
       padding: 16px 32px;
     }
   }
