@@ -12,7 +12,13 @@
   box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.1);
 
   .card-info {
-    padding: 32px 56px;
+    padding-left: 32px;
+    padding-right: 16px;
+
+    @include mq(min-width, 1110px) {
+      padding-left: 56px;
+      padding-right: 24px;
+    }
 
     .card-subtitle {
       text-transform: capitalize;
@@ -25,14 +31,34 @@
     justify-content: center;
     background-color: $pure-white;
     border-radius: 3.2vw;
-    height: 124px;
-    width: 124px;
+    height: 72px;
+    width: 72px;
     color: $red;
     box-shadow: inset 4px 2px 4px rgba(0, 0, 0, 0.1);
 
+    @include mq(min-width, $mobile-max-mq) {
+      height: 90px;
+      width: 90px;
+    }
+
+    @include mq(min-width, 1110px) {
+      height: 110px;
+      width: 110px;
+    }
+
     &__svg {
-      width: 80px;
-      height: 80px;
+      height: 48px;
+      width: 48px;
+
+      @include mq(min-width, $mobile-max-mq) {
+        height: 64px;
+        width: 64px;
+      }
+
+      @include mq(min-width, 1110px) {
+        width: 80px;
+        height: 80px;
+      }
     }
   }
 }

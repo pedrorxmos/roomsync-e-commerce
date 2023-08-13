@@ -173,3 +173,27 @@
     }
   }
 }
+
+.home-categories {
+  .categories-list {
+    // display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    // grid-gap: 12px;
+
+    @include d-flex(row, 12px);
+    justify-content: center;
+    flex-wrap: wrap;
+
+    app-category {
+      width: 100%;
+
+      @include mq(min-width, $mobile-max-mq) {
+        width: calc(50% - 6px);
+      }
+
+      @include mq(min-width, $tablet-max-mq) {
+        width: calc((100% / 3) - 8px);
+      }
+    }
+  }
+}
