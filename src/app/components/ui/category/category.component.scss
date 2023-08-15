@@ -6,10 +6,19 @@
   @include d-flex(row, 0);
   align-items: center;
   justify-content: space-between;
-  border-radius: 3.3333vw;
+  border-radius: 24px;
   background-color: $red;
   color: $white;
   box-shadow: 1px 4px 10px rgba($black, 0.1);
+  overflow: hidden;
+
+  @include mq(min-width, $mobile-max-mq) {
+    border-radius: 32px;
+  }
+
+  @include mq(min-width, 1110px) {
+    border-radius: 36px;
+  }
 
   .card-info {
     padding-left: 32px;
@@ -30,7 +39,7 @@
     align-items: center;
     justify-content: center;
     background-color: $pure-white;
-    border-radius: 3.2vw;
+    border-radius: 24px 0 0 24px;
     height: 72px;
     width: 72px;
     color: $red;
@@ -39,11 +48,13 @@
     @include mq(min-width, $mobile-max-mq) {
       height: 90px;
       width: 90px;
+      border-radius: 32px 0 0 32px;
     }
 
     @include mq(min-width, 1110px) {
       height: 110px;
       width: 110px;
+      border-radius: 36px 0 0 36px;
     }
 
     &__svg {

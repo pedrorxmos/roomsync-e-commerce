@@ -99,8 +99,16 @@
         }
 
         &__container {
-          border-radius: 3.3333vw;
+          border-radius: 24px;
           background-color: $ash2;
+
+          @include mq(min-width, $mobile-max-mq) {
+            border-radius: 32px;
+          }
+
+          @include mq(min-width, $tablet-max-mq) {
+            border-radius: 36px;
+          }
         }
 
         &__top {
