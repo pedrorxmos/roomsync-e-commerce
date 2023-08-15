@@ -23,9 +23,7 @@ export class ProductListPageComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router
-  ) {
-    this.navigateToFilter = this.navigateToFilter.bind(this)
-  }
+  ) {}
 
   ngOnInit(): void {
     this.route.params.subscribe(
@@ -43,6 +41,9 @@ export class ProductListPageComponent implements OnInit {
     }
 
     this.initialProducts = [...this.products]
+
+    this.colorFilterOptions = colorFilter(this.products)
+    this.materialFilterOptions = materialFilter(this.products)
 
     this.route.queryParams.subscribe((params) => {
       this.applyFilters({
@@ -89,18 +90,13 @@ export class ProductListPageComponent implements OnInit {
       this.products = this.products.filter((prod) =>
         prod.material.includes(material)
       )
-
-    this.colorFilterOptions = colorFilter(this.products)
-    this.materialFilterOptions = materialFilter(this.products)
-    // this.navigateToFilter()
   }
 
-  changeColor(value?: string) {
-    console.log(value)
+  changeColor(value?: any): void {
     this.navigateToFilter({ color: value })
   }
 
-  changeMaterial(value?: string) {
+  changeMaterial(value?: string): void {
     this.navigateToFilter({ material: value })
   }
 }

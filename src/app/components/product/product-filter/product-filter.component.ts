@@ -1,4 +1,12 @@
-import { Component, Input, ViewChild, ElementRef } from '@angular/core'
+import {
+  Component,
+  Input,
+  ViewChild,
+  ElementRef,
+  Output,
+  EventEmitter
+} from '@angular/core'
+import { ActivatedRoute, Event } from '@angular/router'
 
 @Component({
   selector: 'app-product-filter',
@@ -13,15 +21,22 @@ export class ProductFilterComponent {
   public values!: any[]
 
   @Input({ required: true })
-  public action!: (args?: any) => any
+  public type!: string
+
+  @Output()
+  public action: EventEmitter<string> = new EventEmitter<string>()
 
   public selectedOption?: any
   public options?: any[]
+  public isActive: boolean = false
 
   @ViewChild('filter') public filterEl!: ElementRef
 
+  constructor(private route: ActivatedRoute) {}
+
   ngOnInit(): void {
     this.options = this.values?.filter((x) => x !== this.selectedOption)
+    this.setFilterActive()
   }
 
   onOpen(): void {
@@ -33,6 +48,18 @@ export class ProductFilterComponent {
   }
 
   onClick(value: string): void {
-    this.action(value)
+    this.action.emit(value)
+    this.onClose()
+
+    setTimeout(() => {
+      this.setFilterActive()
+    }, 200)
+  }
+
+  setFilterActive(): void {
+    this.route.queryParams.subscribe((params) => {
+      this.isActive = params[this.type] !== undefined
+    })
+    console.log(this.type, this.isActive)
   }
 }

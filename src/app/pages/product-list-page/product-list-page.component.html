@@ -5,13 +5,15 @@
       <div class="header-filters">
         <app-product-filter
           title="Color"
+          type="color"
           [values]="colorFilterOptions"
-          [action]="changeColor"
+          (action)="changeColor($event)"
         />
         <app-product-filter
           title="Material"
+          type="material"
           [values]="materialFilterOptions"
-          [action]="changeMaterial"
+          (action)="changeMaterial($event)"
         />
       </div>
     </header>

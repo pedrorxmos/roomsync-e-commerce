@@ -1,5 +1,8 @@
 <div #filter class="product-filter">
-  <button class="filter-dropdown" (click)="onOpen()">
+  <button
+    [class]="'filter-dropdown ' + (isActive ? 'active' : '')"
+    (click)="onOpen()"
+  >
     {{ selectedOption?.name || title }}
   </button>
   <div class="filter-overlay" (click)="onClose()"></div>
@@ -22,6 +25,7 @@
         *ngFor="let item of options"
         [disabled]="item.products.length <= 0"
         (click)="onClick(item.id)"
+        data-value="item.id"
       >
         <div
           [class]="

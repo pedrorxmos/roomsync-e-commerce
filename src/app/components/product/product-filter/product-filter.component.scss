@@ -6,6 +6,7 @@
   position: relative;
 
   .filter-dropdown {
+    position: relative;
     background: $grey5;
     border: none;
     @include d-flex(row, 4px);
@@ -23,6 +24,10 @@
 
     &:hover {
       background-color: darken($grey5, 4);
+    }
+
+    &.active {
+      background-color: darken($ash3, 8);
     }
 
     // .filter-dropdown {
