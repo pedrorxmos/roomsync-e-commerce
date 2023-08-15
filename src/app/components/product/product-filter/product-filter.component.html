@@ -11,6 +11,12 @@
       </button>
     </div>
     <div class="filter-options__list">
+      <button class="filter-options__list__item" (click)="onClick('reset')">
+        <div class="filter-options__list__item__header no-color">
+          <span>Reset</span>
+        </div>
+      </button>
+
       <button
         class="filter-options__list__item"
         *ngFor="let item of options"

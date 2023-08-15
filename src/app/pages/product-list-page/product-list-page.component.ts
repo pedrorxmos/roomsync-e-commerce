@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit, Injectable } from '@angular/core'
 import { ActivatedRoute, Params, Router } from '@angular/router'
 import categoriesDB from '../../../database/categories.json'
 import productsDB from '../../../database/products.json'
-import { Color, Product } from 'src/app/interfaces'
+import { Color, Material, Product } from 'src/app/interfaces'
 import { colorFilter } from './color.filter'
+import { materialFilter } from './material.filter'
 
 @Component({
   selector: 'product-list-page',
@@ -17,11 +18,14 @@ export class ProductListPageComponent implements OnInit {
   public initialProducts: Product[] = [] //This will be needed when reseting filters
 
   public colorFilterOptions: Color[] = []
+  public materialFilterOptions: Material[] = []
 
   constructor(
     private route: ActivatedRoute,
     private router: Router
-  ) {}
+  ) {
+    this.navigateToFilter = this.navigateToFilter.bind(this)
+  }
 
   ngOnInit(): void {
     this.route.params.subscribe(
@@ -67,10 +71,6 @@ export class ProductListPageComponent implements OnInit {
       })
     })
 
-    // this.route.queryParams.subscribe((params) => {
-    //   this.currentColor = params['color']
-    // })
-
     this.route.queryParams.subscribe((params) => {
       this.applyFilters({
         color: params['color'],
@@ -91,6 +91,7 @@ export class ProductListPageComponent implements OnInit {
       )
 
     this.colorFilterOptions = colorFilter(this.products)
+    this.materialFilterOptions = materialFilter(this.products)
     // this.navigateToFilter()
   }
 
