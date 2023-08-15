@@ -20,8 +20,7 @@
 
     <div class="product-list">
       <div class="product-card" *ngFor="let prod of products">
-        <h4>{{ prod.name }}</h4>
-        <span>{{ prod.category }} - {{ prod.subcategory }}</span>
+        <app-product-card [product]="prod" />
       </div>
     </div>
   </section>

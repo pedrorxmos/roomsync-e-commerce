@@ -25,7 +25,29 @@
 }
 
 .product-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  // display: grid;
+  // grid-template-columns: repeat(3, 1fr);
+  // gap: 24px;
+  // justify-content: center;
+  // width: fit-content;
+
+  @include d-flex(row, 20px);
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include mq(min-width, 380px) {
+    gap: 6px;
+  }
+
+  @include mq(min-width, 400px) {
+    gap: 16px;
+  }
+
+  @include mq(min-width, $small-card-max-mq) {
+    gap: 20px;
+  }
+
+  @include mq(min-width, $medium-card-max-mq) {
+    gap: 24px;
+  }
 }
