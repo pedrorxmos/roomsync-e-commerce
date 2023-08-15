@@ -3,10 +3,8 @@
     <header class="section-header list-header">
       <h2>{{ category ? category : 'Shop All' }}</h2>
       <div class="header-filters">
-        <span (click)="changeColor('yellow')">c yellow</span>
-        <span (click)="changeColor('black')">c black</span>
-        <span (click)="changeMaterial('wood')">m wood</span>
-        <span (click)="changeMaterial('reset')">m plas</span>
+        <app-product-filter />
+        <app-product-filter />
       </div>
     </header>
 
