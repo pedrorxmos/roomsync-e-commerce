@@ -4,9 +4,11 @@
     <h4 class="product-card-info__title">{{ product.name }}</h4>
     <div class="product-card-info__subtitle">
       <span class="product-card-info__subtitle__price"
-        >{{ product.price }}$</span
+        >{{ product.price }} $</span
       >
-      <div class="product-card-info__subtitle__stars">
+      <div
+        class="product-card-info__subtitle__stars product-card-info__subtitle__stars__long"
+      >
         <div class="product-card-info__subtitle__stars__star">
           <app-icon name="star" size="sm" class="star_btm"></app-icon>
           <app-icon
@@ -62,6 +64,21 @@
           ></app-icon>
         </div>
       </div>
+      <div
+        class="product-card-info__subtitle__stars product-card-info__subtitle__stars__short"
+      >
+        <small>{{ product.stars }}/5</small>
+        <div class="product-card-info__subtitle__stars__star">
+          <app-icon name="star" size="sm" class="star_btm"></app-icon>
+          <app-icon
+            name="star"
+            size="sm"
+            fill="orange"
+            class="star_top"
+            [style]="'--star-percentage: ' + (product.stars / 5) * 21 + 'px'"
+          ></app-icon>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -72,6 +89,13 @@
       leftIcon="heart"
       class="product-card-actions__favorite"
     ></app-button>
+
+    <app-button
+      type="primary"
+      size="md"
+      leftIcon="shopping-cart"
+      class="product-card-actions__cart__small"
+    />
     <app-button type="primary" size="sm" class="product-card-actions__cart"
       >Add to cart</app-button
     >
