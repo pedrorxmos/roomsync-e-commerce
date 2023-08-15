@@ -35,6 +35,19 @@
 
     .topbar-logo {
       cursor: pointer;
+
+      &__lg {
+        display: none;
+      }
+      @include mq(min-width, 330px) {
+        &__sm {
+          display: none;
+        }
+
+        &__lg {
+          display: block;
+        }
+      }
     }
 
     .topbar-search {
@@ -105,6 +118,10 @@
 
           &__title {
             display: none;
+
+            @include mq(min-width, $mobile-max-mq) {
+              display: block;
+            }
           }
 
           &__after {
