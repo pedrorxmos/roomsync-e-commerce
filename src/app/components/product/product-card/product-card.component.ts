@@ -10,6 +10,9 @@ export class ProductCardComponent implements OnInit {
   @Input({ required: true })
   public product!: Product
 
+  @Input()
+  public className?: string
+
   public imgUrl = ''
   public stars = [1, 1, 1, 1, 1]
 

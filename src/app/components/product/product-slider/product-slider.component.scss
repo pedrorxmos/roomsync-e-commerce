@@ -1,0 +1,11 @@
+@import '../../../../scss/varibales';
+@import '../../../../scss/functions';
+@import '../../../../scss/mixins';
+
+.product-slider {
+  padding: 0 20px 20px;
+
+  .slider-card {
+    padding: 20px 10px;
+  }
+}

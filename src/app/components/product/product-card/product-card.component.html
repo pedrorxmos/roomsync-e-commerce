@@ -1,4 +1,4 @@
-<article class="product-card">
+<article [class]="'product-card ' + className">
   <div class="product-card-info">
     <img [src]="imgUrl" [alt]="product.name" class="product-card-info__img" />
     <h4 class="product-card-info__title">{{ product.name }}</h4>

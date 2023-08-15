@@ -1,1 +1,11 @@
-<p>product-slider works!</p>
+<div
+  class="product-slider"
+  data-flickity='{ "cellAlign": "center", "contain": true, "wrapAround": true, "groupCells": true }'
+>
+  <app-product-card
+    #slider
+    *ngFor="let prod of products"
+    [product]="prod"
+    class="slider-card"
+  ></app-product-card>
+</div>
