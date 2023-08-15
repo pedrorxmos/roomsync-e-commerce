@@ -90,8 +90,8 @@
     }
   },
   {
-    "id": "wood-selfunit",
-    "name": "Wood Self Unit",
+    "id": "wood-shelfunit",
+    "name": "Wood Shelf Unit",
     "category": "furniture",
     "subcategory": "organization",
     "price": 58.99,
@@ -222,8 +222,8 @@
     }
   },
   {
-    "id": "red-selfunit",
-    "name": "Red Self Unit",
+    "id": "red-shelfunit",
+    "name": "Red Shelf Unit",
     "category": "furniture",
     "subcategory": "organization",
     "price": 129.99,
@@ -805,7 +805,7 @@
     }
   },
   {
-    "id": "White Drawer",
+    "id": "white-drawer",
     "name": "White Drawer",
     "category": "furniture",
     "subcategory": "organization",
