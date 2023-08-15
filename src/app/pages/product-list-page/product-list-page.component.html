@@ -3,8 +3,11 @@
     <header class="section-header list-header">
       <h2>{{ category ? category : 'Shop All' }}</h2>
       <div class="header-filters">
-        <app-product-filter />
-        <app-product-filter />
+        <app-product-filter
+          title="Color"
+          [values]="colorFilterOptions"
+          [action]="changeColor"
+        />
       </div>
     </header>
 

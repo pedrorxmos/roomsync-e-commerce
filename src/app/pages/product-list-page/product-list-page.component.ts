@@ -3,6 +3,7 @@ import { ActivatedRoute, Params, Router } from '@angular/router'
 import categoriesDB from '../../../database/categories.json'
 import productsDB from '../../../database/products.json'
 import { Color, Product } from 'src/app/interfaces'
+import { colorFilter } from './color.filter'
 
 @Component({
   selector: 'product-list-page',
@@ -15,7 +16,7 @@ export class ProductListPageComponent implements OnInit {
   public products: Product[] = productsDB
   public initialProducts: Product[] = [] //This will be needed when reseting filters
 
-  public currentColor: string | undefined = undefined
+  public colorFilterOptions: Color[] = []
 
   constructor(
     private route: ActivatedRoute,
@@ -81,8 +82,6 @@ export class ProductListPageComponent implements OnInit {
   applyFilters({ color, material }: { color?: string; material?: string }) {
     this.products = this.initialProducts
 
-    console.log(color, this.initialProducts)
-
     if (color)
       this.products = this.products.filter((prod) => prod.color.includes(color))
 
@@ -91,17 +90,16 @@ export class ProductListPageComponent implements OnInit {
         prod.material.includes(material)
       )
 
-    console.log(this.products)
+    this.colorFilterOptions = colorFilter(this.products)
     // this.navigateToFilter()
   }
 
   changeColor(value?: string) {
-    // this.currentColor = 'red'
+    console.log(value)
     this.navigateToFilter({ color: value })
   }
 
   changeMaterial(value?: string) {
-    // this.currentColor = 'red'
     this.navigateToFilter({ material: value })
   }
 }
