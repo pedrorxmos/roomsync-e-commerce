@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core'
-import { ActivatedRoute } from '@angular/router'
+import { ActivatedRoute, Params, Router } from '@angular/router'
 import categoriesDB from '../../../database/categories.json'
 import productsDB from '../../../database/products.json'
-import { Product } from 'src/app/interfaces'
+import { Color, Product } from 'src/app/interfaces'
 
 @Component({
   selector: 'product-list-page',
@@ -15,7 +15,13 @@ export class ProductListPageComponent implements OnInit {
   public products: Product[] = productsDB
   public initialProducts: Product[] = [] //This will be needed when reseting filters
 
-  constructor(private route: ActivatedRoute) {}
+  public currentColor: string | undefined = undefined
+
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
+
   ngOnInit(): void {
     this.route.params.subscribe(
       (params) => (this.categoryId = params['category'])
@@ -31,6 +37,71 @@ export class ProductListPageComponent implements OnInit {
       )
     }
 
-    this.initialProducts = this.products
+    this.initialProducts = [...this.products]
+
+    this.route.queryParams.subscribe((params) => {
+      this.applyFilters({
+        color: params['color'],
+        material: params['material']
+      })
+    })
+  }
+
+  navigateToFilter({ color, material }: { color?: string; material?: string }) {
+    const urlTree = this.categoryId ? ['shop', this.categoryId] : ['shop']
+
+    this.route.queryParams.subscribe((params) => {
+      const { color: prevColor, material: prevMaterial, ...rest } = params
+      this.router.navigate(urlTree, {
+        queryParams: {
+          color: color === 'reset' ? undefined : color ? color : prevColor,
+          material:
+            material === 'reset'
+              ? undefined
+              : material
+              ? material
+              : prevMaterial,
+          ...rest
+        }
+      })
+    })
+
+    // this.route.queryParams.subscribe((params) => {
+    //   this.currentColor = params['color']
+    // })
+
+    this.route.queryParams.subscribe((params) => {
+      this.applyFilters({
+        color: params['color'],
+        material: params['material']
+      })
+    })
+  }
+
+  applyFilters({ color, material }: { color?: string; material?: string }) {
+    this.products = this.initialProducts
+
+    console.log(color, this.initialProducts)
+
+    if (color)
+      this.products = this.products.filter((prod) => prod.color.includes(color))
+
+    if (material)
+      this.products = this.products.filter((prod) =>
+        prod.material.includes(material)
+      )
+
+    console.log(this.products)
+    // this.navigateToFilter()
+  }
+
+  changeColor(value?: string) {
+    // this.currentColor = 'red'
+    this.navigateToFilter({ color: value })
+  }
+
+  changeMaterial(value?: string) {
+    // this.currentColor = 'red'
+    this.navigateToFilter({ material: value })
   }
 }
