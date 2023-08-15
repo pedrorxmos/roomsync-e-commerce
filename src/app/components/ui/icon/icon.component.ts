@@ -29,6 +29,12 @@ export class IconComponent implements AfterViewInit, OnInit {
   @Input({ alias: 'class' })
   public className?: string
 
+  @Input()
+  public fill?: string
+
+  @Input()
+  public fillPercent?: number
+
   public inlineClass: string = ''
 
   @ViewChild('icon') iconElement!: ElementRef
@@ -42,6 +48,6 @@ export class IconComponent implements AfterViewInit, OnInit {
   ngOnInit(): void {
     this.inlineClass = `icon icon-${this.size} feather feather-${this.name} ${
       this.className ? this.className : ''
-    }`
+    } ${this.fill ? 'icon-fill' : ''}`
   }
 }

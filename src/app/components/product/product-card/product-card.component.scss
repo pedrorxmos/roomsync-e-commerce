@@ -1,0 +1,66 @@
+@import '../../../../scss/varibales';
+@import '../../../../scss/functions';
+@import '../../../../scss/mixins';
+
+.product-card {
+  @include d-flex(column, 32px);
+  padding: 32px 48px;
+  background-color: $pure-white;
+  box-shadow: 1px 4px 10px rgba($black, 0.1);
+  border-radius: 48px;
+
+  &-info {
+    @include d-flex(column, 12px);
+
+    &__img {
+      width: 200px;
+      height: 200px;
+    }
+
+    &__subtitle {
+      @include d-flex(row, 0);
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+
+      &__stars {
+        @include d-flex(row, 2px);
+
+        &__star {
+          position: relative;
+
+          .star_btm {
+            color: $grey5;
+          }
+
+          .star_top {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: var(--star-percentage);
+            overflow: hidden;
+            // @include prefix(transform, (translateX(58%)));
+          }
+        }
+      }
+    }
+  }
+
+  &-actions {
+    @include d-flex(row, 12px);
+    width: 100%;
+    justify-content: center;
+
+    &__cart {
+      @include d-flex();
+      flex: 1;
+      width: 100%;
+      align-items: stretch;
+
+      .btn {
+        flex: 1;
+        width: 100%;
+      }
+    }
+  }
+}

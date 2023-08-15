@@ -17,4 +17,10 @@
     width: 32px;
     height: 32px;
   }
+
+  &-fill {
+    fill: var(--fill-color);
+    stroke: var(--fill-color);
+    stroke-width: 2.3;
+  }
 }

@@ -7,17 +7,73 @@
         >{{ product.price }}$</span
       >
       <div class="product-card-info__subtitle__stars">
-        <app-icon name="star" size="sm"></app-icon>
-        <app-icon name="star" size="sm"></app-icon>
-        <app-icon name="star" size="sm"></app-icon>
-        <app-icon name="star" size="sm"></app-icon>
-        <app-icon name="star" size="sm"></app-icon>
+        <div class="product-card-info__subtitle__stars__star">
+          <app-icon name="star" size="sm" class="star_btm"></app-icon>
+          <app-icon
+            name="star"
+            size="sm"
+            fill="orange"
+            class="star_top"
+            [style]="'--star-percentage: ' + stars[0] * 21 + 'px'"
+          ></app-icon>
+        </div>
+
+        <div class="product-card-info__subtitle__stars__star">
+          <app-icon name="star" size="sm" class="star_btm"></app-icon>
+          <app-icon
+            name="star"
+            size="sm"
+            fill="orange"
+            class="star_top"
+            [style]="'--star-percentage: ' + stars[1] * 21 + 'px'"
+          ></app-icon>
+        </div>
+
+        <div class="product-card-info__subtitle__stars__star">
+          <app-icon name="star" size="sm" class="star_btm"></app-icon>
+          <app-icon
+            name="star"
+            size="sm"
+            fill="orange"
+            class="star_top"
+            [style]="'--star-percentage: ' + stars[2] * 21 + 'px'"
+          ></app-icon>
+        </div>
+
+        <div class="product-card-info__subtitle__stars__star">
+          <app-icon name="star" size="sm" class="star_btm"></app-icon>
+          <app-icon
+            name="star"
+            size="sm"
+            fill="orange"
+            class="star_top"
+            [style]="'--star-percentage: ' + stars[3] * 21 + 'px'"
+          ></app-icon>
+        </div>
+
+        <div class="product-card-info__subtitle__stars__star">
+          <app-icon name="star" size="sm" class="star_btm"></app-icon>
+          <app-icon
+            name="star"
+            size="sm"
+            fill="orange"
+            class="star_top"
+            [style]="'--star-percentage: ' + stars[4] * 21 + 'px'"
+          ></app-icon>
+        </div>
       </div>
     </div>
   </div>
 
   <div class="product-card-actions">
-    <app-button type="secondary" size="sm" leftIcon="heart"></app-button>
-    <app-button type="primary" size="sm">Add to cart</app-button>
+    <app-button
+      type="secondary"
+      size="sm"
+      leftIcon="heart"
+      class="product-card-actions__favorite"
+    ></app-button>
+    <app-button type="primary" size="sm" class="product-card-actions__cart"
+      >Add to cart</app-button
+    >
   </div>
 </article>
