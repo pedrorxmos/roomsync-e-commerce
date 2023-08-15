@@ -1,0 +1,31 @@
+@import '../../../scss/varibales';
+@import '../../../scss/functions';
+@import '../../../scss/mixins';
+
+.list-header {
+  @include d-flex(row, 0);
+  justify-content: space-between;
+  align-items: flex-end;
+
+  @include mq(max-width, 420px) {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .header-filters {
+    @include d-flex(row, 12px);
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    @include mq(max-width, 420px) {
+      align-self: flex-end;
+    }
+  }
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}

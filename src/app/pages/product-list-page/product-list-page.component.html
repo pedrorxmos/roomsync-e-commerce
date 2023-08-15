@@ -1,4 +1,28 @@
 <main>
-  <p>product-list-page works!</p>
-  <span>Category: {{ category ? category : 'All products' }}</span>
+  <section class="main-section">
+    <header class="section-header list-header">
+      <h2>{{ category ? category : 'Shop All' }}</h2>
+      <div class="header-filters">
+        <app-product-filter
+          title="Color"
+          type="color"
+          [values]="colorFilterOptions"
+          (action)="changeColor($event)"
+        />
+        <app-product-filter
+          title="Material"
+          type="material"
+          [values]="materialFilterOptions"
+          (action)="changeMaterial($event)"
+        />
+      </div>
+    </header>
+
+    <div class="product-list">
+      <div class="product-card" *ngFor="let prod of products">
+        <h4>{{ prod.name }}</h4>
+        <span>{{ prod.category }} - {{ prod.subcategory }}</span>
+      </div>
+    </div>
+  </section>
 </main>

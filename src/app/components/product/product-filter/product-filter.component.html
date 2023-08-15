@@ -1,0 +1,50 @@
+<div #filter class="product-filter">
+  <button
+    [class]="'filter-dropdown ' + (isActive ? 'active' : '')"
+    (click)="onOpen()"
+  >
+    {{ selectedOption?.name || title }}
+  </button>
+  <div class="filter-overlay" (click)="onClose()"></div>
+  <div class="filter-options">
+    <div class="filter-options__header">
+      <h4>{{ title }}</h4>
+      <button class="filter-options__header__action" (click)="onClose()">
+        <app-icon name="x" size="sm" title="close filter" />
+      </button>
+    </div>
+    <div class="filter-options__list">
+      <button class="filter-options__list__item" (click)="onClick('reset')">
+        <div class="filter-options__list__item__header no-color">
+          <span>Reset</span>
+        </div>
+      </button>
+
+      <button
+        class="filter-options__list__item"
+        *ngFor="let item of options"
+        [disabled]="item.products.length <= 0"
+        (click)="onClick(item.id)"
+        data-value="item.id"
+      >
+        <div
+          [class]="
+            'filter-options__list__item__header ' +
+            (item.hex === undefined ? 'no-color' : '')
+          "
+        >
+          <div
+            class="item-color"
+            *ngIf="item.hex !== undefined"
+            [style]="'--color: ' + item.hex"
+          ></div>
+          <span>{{ item.name }}</span>
+        </div>
+
+        <span class="filter-options__list__item__qty">{{
+          item.products.length
+        }}</span>
+      </button>
+    </div>
+  </div>
+</div>

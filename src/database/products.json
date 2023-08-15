@@ -6,6 +6,13 @@
     "subcategory": "chairs",
     "price": 59.99,
     "stars": 4.2,
+    "color": [
+      "grey",
+      "brown"
+    ],
+    "material": [
+      "wood"
+    ],
     "info": {
       "description": "A grey woody chair exudes timeless elegance, blending the warmth of wood with a sleek, neutral grey finish. Its minimalist design and sturdy construction provide both comfort and style, making it a perfect addition to any modern or classic interior setting.",
       "measures": {
@@ -22,6 +29,12 @@
     "subcategory": "bowls-vases",
     "price": 15.99,
     "stars": 4.9,
+    "color": [
+      "green"
+    ],
+    "material": [
+      "plastic"
+    ],
     "info": {
       "description": "This charming vase brings a touch of the arid outdoors into your living space, creating a striking focal point that blends artistry and nature in perfect harmony.",
       "measures": {
@@ -38,6 +51,13 @@
     "subcategory": "sofas",
     "price": 599.99,
     "stars": 4.5,
+    "color": [
+      "grey"
+    ],
+    "material": [
+      "wood",
+      "fabric"
+    ],
     "info": {
       "description": "The dark grey sofa exudes contemporary sophistication, boasting a plush yet sleek design that seamlessly complements any interior. Its understated elegance and versatile color make it a timeless centerpiece for modern living spaces.",
       "measures": {
@@ -54,6 +74,12 @@
     "subcategory": "chairs",
     "price": 39.99,
     "stars": 5,
+    "color": [
+      "white"
+    ],
+    "material": [
+      "plastic"
+    ],
     "info": {
       "description": "A white basic chair embodies minimalist purity, featuring clean lines and a neutral hue that effortlessly integrates into diverse decor schemes. Its simplicity offers both functionality and a serene aesthetic, making it an essential element for any understated setting.",
       "measures": {
@@ -70,6 +96,12 @@
     "subcategory": "organization",
     "price": 58.99,
     "stars": 4.8,
+    "color": [
+      "brown"
+    ],
+    "material": [
+      "wood"
+    ],
     "info": {
       "description": "The wooden shelf unit harmoniously blends form and function, showcasing the natural beauty of wood while providing ample storage and display space for your belongings. Its rustic charm and versatile design make it an inviting addition to any room.",
       "measures": {
@@ -86,6 +118,12 @@
     "subcategory": "decoration",
     "price": 14.99,
     "stars": 4.2,
+    "color": [
+      "brown"
+    ],
+    "material": [
+      "wood"
+    ],
     "info": {
       "description": "The wooden hand sculpture stands as a testament to craftsmanship, its intricate design capturing both elegance and artistry.",
       "measures": {
@@ -102,6 +140,12 @@
     "subcategory": "chairs",
     "price": 21.99,
     "stars": 4.0,
+    "color": [
+      "yellow"
+    ],
+    "material": [
+      "plastic"
+    ],
     "info": {
       "description": "The yellow kids stool radiates playful charm, providing a vibrant and functional seating solution perfectly sized for young adventurers.",
       "measures": {
@@ -118,6 +162,12 @@
     "subcategory": "decoration",
     "price": 15.99,
     "stars": 3.9,
+    "color": [
+      "brown"
+    ],
+    "material": [
+      "metal"
+    ],
     "info": {
       "description": "The little sun decoration infuses spaces with a cheerful radiance, spreading warmth and positivity through its whimsical design.",
       "measures": {
@@ -134,6 +184,12 @@
     "subcategory": "plants",
     "price": 3.49,
     "stars": 4.5,
+    "color": [
+      "green"
+    ],
+    "material": [
+      "plastic"
+    ],
     "info": {
       "description": "The 3-pack of mini artificial plants brings a touch of nature's tranquility into any corner, offering low-maintenance greenery that lasts without compromise.",
       "measures": {
@@ -150,6 +206,12 @@
     "subcategory": "plants",
     "price": 59.99,
     "stars": 4.6,
+    "color": [
+      "green"
+    ],
+    "material": [
+      "plastic"
+    ],
     "info": {
       "description": "The medium palm plant transforms spaces into lush havens, its graceful fronds adding a tropical allure that captures the essence of relaxation.",
       "measures": {
@@ -166,6 +228,12 @@
     "subcategory": "organization",
     "price": 129.99,
     "stars": 4.7,
+    "color": [
+      "red"
+    ],
+    "material": [
+      "metal"
+    ],
     "info": {
       "description": "The industrial red shelf unit combines bold aesthetics with functionality, showcasing a vibrant red finish and robust design that adds a pop of color and contemporary flair to your space. Its versatile shelves offer ample storage while exuding a rugged, urban charm.",
       "measures": {
@@ -182,6 +250,14 @@
     "subcategory": "desks-tables",
     "price": 169.49,
     "stars": 4.8,
+    "color": [
+      "white",
+      "brown"
+    ],
+    "material": [
+      "fabric",
+      "whood"
+    ],
     "info": {
       "description": "The white wooden desk blends timeless elegance with practicality, providing a clean and versatile workspace that harmonizes effortlessly with any decor.",
       "measures": {
@@ -198,6 +274,12 @@
     "subcategory": "desks-tables",
     "price": 119.49,
     "stars": 4.7,
+    "color": [
+      "black"
+    ],
+    "material": [
+      "wood"
+    ],
     "info": {
       "description": "The black wood desk emanates sleek sophistication and functionality, offering a modern workspace that effortlessly complements diverse interior styles.",
       "measures": {
@@ -214,6 +296,14 @@
     "subcategory": "outdoors",
     "price": 269.99,
     "stars": 5,
+    "color": [
+      "white",
+      "brown"
+    ],
+    "material": [
+      "fabric",
+      "wood"
+    ],
     "info": {
       "description": "The white outdoor chair invites relaxation in the open air, its crisp hue and durable design combining to create a serene and stylish seating option for alfresco moments.",
       "measures": {
@@ -228,6 +318,14 @@
     "name": "White Chaise Outdoor",
     "category": "furniture",
     "subcategory": "outdoors",
+    "color": [
+      "white",
+      "brown"
+    ],
+    "material": [
+      "fabric",
+      "wood"
+    ],
     "price": 213.99,
     "stars": 4.5,
     "info": {
@@ -244,6 +342,12 @@
     "name": "Wood Bench Outdoor",
     "category": "furniture",
     "subcategory": "outdoors",
+    "color": [
+      "brown"
+    ],
+    "material": [
+      "wood"
+    ],
     "price": 89.99,
     "stars": 3.8,
     "info": {
@@ -262,6 +366,14 @@
     "subcategory": "outdoors",
     "price": 499.99,
     "stars": 3.8,
+    "color": [
+      "white",
+      "brown"
+    ],
+    "material": [
+      "fabric",
+      "wood"
+    ],
     "info": {
       "description": "The white outdoor sofa epitomizes relaxation and elegance, offering a comfortable and stylish haven for outdoor lounging and gatherings, enhancing the beauty of your outdoor living space.",
       "measures": {
@@ -278,6 +390,12 @@
     "subcategory": "organization",
     "price": 199.99,
     "stars": 4.2,
+    "color": [
+      "black"
+    ],
+    "material": [
+      "wood"
+    ],
     "info": {
       "description": "The black drawer exudes modern sophistication, seamlessly combining practical storage with a sleek design that enhances organization while making a bold statement in any room.",
       "measures": {
@@ -294,6 +412,12 @@
     "subcategory": "chairs",
     "price": 54.99,
     "stars": 4.6,
+    "color": [
+      "black"
+    ],
+    "material": [
+      "plastic"
+    ],
     "info": {
       "description": "The black armless chair epitomizes sleek minimalism, offering a chic and versatile seating option that effortlessly complements various interior styles while maximizing comfort and space.",
       "measures": {
@@ -310,6 +434,12 @@
     "subcategory": "chairs",
     "price": 40.99,
     "stars": 4.2,
+    "color": [
+      "blue"
+    ],
+    "material": [
+      "plastic"
+    ],
     "info": {
       "description": "The blue clear chair adds a pop of vibrant color and contemporary transparency to your space, combining modern aesthetics with comfort in a unique and visually striking design.",
       "measures": {
@@ -324,6 +454,12 @@
     "name": "Grass Plant",
     "category": "decor",
     "subcategory": "plants",
+    "color": [
+      "green"
+    ],
+    "material": [
+      "plastic"
+    ],
     "price": 29.99,
     "stars": 4.7,
     "info": {
@@ -340,6 +476,12 @@
     "name": "Monstera Plant",
     "category": "decor",
     "subcategory": "plants",
+    "color": [
+      "green"
+    ],
+    "material": [
+      "plastic"
+    ],
     "price": 49.49,
     "stars": 4.8,
     "info": {
@@ -356,6 +498,13 @@
     "name": "Black Loveseat",
     "category": "furniture",
     "subcategory": "sofas",
+    "color": [
+      "black"
+    ],
+    "material": [
+      "whood",
+      "fabric"
+    ],
     "price": 359.89,
     "stars": 4.7,
     "info": {
@@ -374,6 +523,12 @@
     "subcategory": "bowls-vases",
     "price": 25.99,
     "stars": 4.5,
+    "color": [
+      "yellow"
+    ],
+    "material": [
+      "plastic"
+    ],
     "info": {
       "description": "The gold flower bowl exudes opulence and artistry, serving as a striking centerpiece that beautifully showcases your floral arrangements while adding a touch of luxury and elegance to your space.",
       "measures": {
@@ -390,6 +545,12 @@
     "subcategory": "bowls-vases",
     "price": 29.99,
     "stars": 4.6,
+    "color": [
+      "white"
+    ],
+    "material": [
+      "plastic"
+    ],
     "info": {
       "description": "The iris vase captures the delicate beauty of nature, its graceful design providing an exquisite display for your floral arrangements, infusing your home with timeless charm and artistic allure.",
       "measures": {
@@ -406,6 +567,12 @@
     "subcategory": "decoration",
     "price": 16.99,
     "stars": 4.1,
+    "color": [
+      "black"
+    ],
+    "material": [
+      "plastic"
+    ],
     "info": {
       "description": "The little bike decoration brings a playful and charming element to your space, evoking a sense of nostalgia and adventure while adding a whimsical touch to your décor.",
       "measures": {
@@ -422,6 +589,12 @@
     "subcategory": "decoration",
     "price": 8.99,
     "stars": 4.8,
+    "color": [
+      "brown"
+    ],
+    "material": [
+      "plastic"
+    ],
     "info": {
       "description": "The hourglass stands as a captivating embodiment of time's passage, its graceful form and flowing sands offering both visual appeal and a meditative reminder of the fleeting nature of moments.",
       "measures": {
@@ -438,6 +611,13 @@
     "subcategory": "sofas",
     "price": 349.99,
     "stars": 4.2,
+    "color": [
+      "grey"
+    ],
+    "material": [
+      "wood",
+      "fabric"
+    ],
     "info": {
       "description": "The grey sofa radiates modern elegance, blending neutral tones with sleek lines to create a versatile and inviting centerpiece that effortlessly complements various interior styles.",
       "measures": {
@@ -454,6 +634,12 @@
     "subcategory": "plants",
     "price": 4.49,
     "stars": 4.2,
+    "color": [
+      "brown"
+    ],
+    "material": [
+      "plastic"
+    ],
     "info": {
       "description": "The brown bouquet weaves together earthy tones and natural beauty, creating a warm and rustic floral arrangement that celebrates the richness of the outdoors and adds a cozy touch to your space.",
       "measures": {
@@ -470,6 +656,12 @@
     "subcategory": "chairs",
     "price": 19.99,
     "stars": 4.4,
+    "color": [
+      "green"
+    ],
+    "material": [
+      "plastic"
+    ],
     "info": {
       "description": "The green stool infuses a fresh pop of color and contemporary flair, providing a versatile and stylish seating option that seamlessly integrates into your interior while adding a vibrant touch.",
       "measures": {
@@ -486,6 +678,13 @@
     "subcategory": "chairs",
     "price": 109.99,
     "stars": 4.5,
+    "color": [
+      "black"
+    ],
+    "material": [
+      "plastic",
+      "fabric"
+    ],
     "info": {
       "description": "The black armchair exudes timeless sophistication, offering a comfortable and elegant seating choice that effortlessly enhances the aesthetics of any room, whether modern or classic.",
       "measures": {
@@ -502,6 +701,12 @@
     "subcategory": "desks-tables",
     "price": 129.49,
     "stars": 3.9,
+    "color": [
+      "white"
+    ],
+    "material": [
+      "wood"
+    ],
     "info": {
       "description": "The white desktop embodies clean minimalism, providing a spacious and pristine work surface that promotes focus and creativity while seamlessly blending into a variety of interior design schemes.",
       "measures": {
@@ -518,6 +723,12 @@
     "subcategory": "desks-tables",
     "price": 39.99,
     "stars": 4.4,
+    "color": [
+      "brown"
+    ],
+    "material": [
+      "wood"
+    ],
     "info": {
       "description": "The wood side table exudes natural charm, combining the warmth of wood grain with functional design to create a versatile and rustic-inspired accent piece that complements your living space.",
       "measures": {
@@ -534,6 +745,12 @@
     "subcategory": "bowls-vases",
     "price": 17.99,
     "stars": 4.3,
+    "color": [
+      "green"
+    ],
+    "material": [
+      "plastic"
+    ],
     "info": {
       "description": "The green translucent vase merges artistry with a hint of mystery, casting a soft glow and creating a captivating showcase for your floral arrangements, infusing your room with a subtle, ethereal ambiance.",
       "measures": {
@@ -550,6 +767,12 @@
     "subcategory": "bowls-vases",
     "price": 9.99,
     "stars": 4.3,
+    "color": [
+      "black"
+    ],
+    "material": [
+      "plastic"
+    ],
     "info": {
       "description": "The black wired bowl intertwines form and function, featuring a modern design that elegantly organizes and displays your items while adding a sleek and contemporary touch to your décor.",
       "measures": {
@@ -566,6 +789,12 @@
     "subcategory": "organization",
     "price": 34.49,
     "stars": 4.6,
+    "color": [
+      "black"
+    ],
+    "material": [
+      "wood"
+    ],
     "info": {
       "description": "The black bookcase melds practicality with style, offering ample storage for your literary treasures while exuding a sleek and modern aesthetic that enhances the organization and aesthetics of your space.",
       "measures": {
@@ -582,6 +811,12 @@
     "subcategory": "organization",
     "price": 48.99,
     "stars": 3.7,
+    "color": [
+      "white"
+    ],
+    "material": [
+      "wood"
+    ],
     "info": {
       "description": "The white drawer combines simplicity and utility, providing a clean and versatile storage solution that seamlessly integrates into your décor while keeping your belongings organized and easily accessible.",
       "measures": {
@@ -598,6 +833,12 @@
     "subcategory": "desks-tables",
     "price": 89.49,
     "stars": 4.4,
+    "color": [
+      "black"
+    ],
+    "material": [
+      "plastic"
+    ],
     "info": {
       "description": "The black table exudes timeless elegance, offering a versatile and stylish surface that complements a range of interior styles, whether as a functional centerpiece or an accent piece.",
       "measures": {

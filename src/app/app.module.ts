@@ -11,6 +11,7 @@ import {
   FooterComponent,
   IconComponent,
   ProductCardComponent,
+  ProductFilterComponent,
   ProductSliderComponent,
   StarsRateComponent,
   TopbarComponent
@@ -32,13 +33,14 @@ import {
     DropdownComponent,
     FooterComponent,
     HomePageComponent,
+    IconComponent,
     ProductCardComponent,
     ProductDetailPageComponent,
+    ProductFilterComponent,
     ProductListPageComponent,
     ProductSliderComponent,
     StarsRateComponent,
-    TopbarComponent,
-    IconComponent
+    TopbarComponent
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

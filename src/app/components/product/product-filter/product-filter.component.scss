@@ -1,0 +1,167 @@
+@import '../../../../scss/varibales';
+@import '../../../../scss/functions';
+@import '../../../../scss/mixins';
+
+.product-filter {
+  position: relative;
+
+  .filter-dropdown {
+    position: relative;
+    background: $grey5;
+    border: none;
+    @include d-flex(row, 4px);
+    justify-content: flex-end;
+    align-items: flex-end;
+    z-index: 10;
+    padding: 6px 12px;
+    border-radius: 8px;
+    color: $black;
+    font-size: size(sm);
+    text-transform: capitalize;
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 1;
+
+    &:hover {
+      background-color: darken($grey5, 4);
+    }
+
+    &.active {
+      background-color: darken($ash3, 8);
+    }
+
+    // .filter-dropdown {
+    //   @include d-flex(row, 12px);
+    //   align-items: flex-end;
+    //   border-bottom: 1px solid $black;
+    //   padding: 2px 6px;
+    // }
+  }
+
+  .filter-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background-color: rgba($black, 0.1);
+    display: none;
+    @include mq(min-width, $mobile-max-mq) {
+      background-color: transparent;
+    }
+  }
+
+  .filter-options {
+    z-index: -1;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    @include prefix(transform, (translate(-50%, -50%)));
+    width: calc(100% - $mobile-padding * 2);
+    height: fit-content;
+    background-color: $white;
+    padding: 12px;
+    box-shadow: 1px 4px 10px rgba($black, 0.1);
+    border-radius: 16px;
+    @include d-flex(column, 16px);
+    color: $black;
+    display: none;
+
+    @include mq(min-width, $mobile-max-mq) {
+      position: absolute;
+      top: calc(100% + 6px);
+      left: unset;
+      right: 0;
+      transform: unset;
+      width: 180px;
+      border-radius: 12px;
+    }
+
+    &__header {
+      @include d-flex(row, 0);
+      justify-content: space-between;
+      align-items: center;
+      text-transform: capitalize;
+      border-bottom: 1px solid $grey5;
+      padding-bottom: 8px;
+
+      @include mq(min-width, $mobile-max-mq) {
+        display: none;
+      }
+
+      &__action {
+        background: none;
+        border: none;
+        color: $black;
+        cursor: pointer;
+      }
+    }
+
+    &__list {
+      @include d-flex(column, 8px);
+
+      &__item {
+        background-color: $grey5;
+        padding: 12px 24px 12px 16px;
+        border-radius: 12px;
+        border: none;
+        cursor: pointer;
+        color: $black;
+        font-size: size(md);
+        @include d-flex(row, 4px);
+        justify-content: space-between;
+
+        @include mq(min-width, $mobile-max-mq) {
+          font-size: size(sm);
+          padding: 8px 16px 8px 8px;
+          border-radius: 8px;
+        }
+
+        &:disabled {
+          opacity: 0.5;
+          cursor: no-drop;
+          &:hover {
+            background-color: $grey5;
+          }
+        }
+
+        &__header {
+          @include d-flex(row, 12px);
+          font-weight: 500;
+
+          &.no-color {
+            padding-left: 8px;
+          }
+
+          .item-color {
+            height: 16px;
+            width: 16px;
+            background-color: var(--color);
+            border-radius: 4px;
+          }
+        }
+
+        &__qty {
+          color: $grey3;
+        }
+
+        &:hover {
+          background-color: darken($grey5, 4);
+        }
+      }
+    }
+  }
+
+  &.open {
+    .filter-overlay {
+      display: flex;
+      z-index: 1000;
+    }
+
+    .filter-options {
+      display: flex;
+      z-index: 1002;
+    }
+  }
+}
