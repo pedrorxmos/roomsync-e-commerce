@@ -1,1 +1,23 @@
-<p>product-card works!</p>
+<article class="product-card">
+  <div class="product-card-info">
+    <img [src]="imgUrl" [alt]="product.name" class="product-card-info__img" />
+    <h4 class="product-card-info__title">{{ product.name }}</h4>
+    <div class="product-card-info__subtitle">
+      <span class="product-card-info__subtitle__price"
+        >{{ product.price }}$</span
+      >
+      <div class="product-card-info__subtitle__stars">
+        <app-icon name="star" size="sm"></app-icon>
+        <app-icon name="star" size="sm"></app-icon>
+        <app-icon name="star" size="sm"></app-icon>
+        <app-icon name="star" size="sm"></app-icon>
+        <app-icon name="star" size="sm"></app-icon>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card-actions">
+    <app-button type="secondary" size="sm" leftIcon="heart"></app-button>
+    <app-button type="primary" size="sm">Add to cart</app-button>
+  </div>
+</article>
