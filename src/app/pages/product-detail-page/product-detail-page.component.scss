@@ -4,9 +4,11 @@
 
 .product-detail {
   @include d-flex(column, 32px);
+  align-items: center;
 
   @include mq(min-width, $mobile-max-mq) {
     flex-direction: row;
+    align-items: flex-start;
   }
 
   &__img {
@@ -14,8 +16,10 @@
     height: 100%;
     border-radius: 24px;
     box-shadow: 1px 4px 10px rgba($black, 0.1);
-    max-width: 500px;
-    max-height: 500px;
+    max-width: 480px;
+    max-height: 480px;
+    background-color: $pure-white;
+    padding: 16px;
 
     @include mq(min-width, $mobile-max-mq) {
       border-radius: 32px;
@@ -90,7 +94,7 @@
         flex-direction: column;
       }
 
-      @include mq(min-width, 670px) {
+      @include mq(min-width, 680px) {
         flex-direction: row;
       }
 
@@ -106,7 +110,7 @@
           width: 100%;
         }
 
-        @include mq(min-width, 670px) {
+        @include mq(min-width, 680px) {
           width: unset;
         }
       }
