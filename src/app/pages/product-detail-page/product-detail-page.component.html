@@ -5,9 +5,9 @@
       <header class="product-detail__info__header">
         <div class="product-detail__info__header__title">
           <h1 class="h2">{{ product?.name }}</h1>
-          <span [routerLink]="'/shop/' + product?.subcategory">
+          <a [routerLink]="'/shop/' + product?.subcategory">
             {{ product?.subcategory }}
-          </span>
+          </a>
         </div>
 
         <div class="product-detail__info__header__stars">
