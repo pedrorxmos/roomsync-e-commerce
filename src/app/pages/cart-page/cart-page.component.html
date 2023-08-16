@@ -21,7 +21,13 @@
         </div>
       </div>
 
-      <app-button type="primary" size="sm" link url="/">Checkout</app-button>
+      <app-button
+        type="primary"
+        size="sm"
+        (click)="onRemoveAll()"
+        routerLink="/"
+        >Checkout</app-button
+      >
     </div>
   </section>
 

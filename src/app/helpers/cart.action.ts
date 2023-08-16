@@ -63,3 +63,7 @@ export const removeFromCart = (id: string): void => {
     JSON.stringify(getCart().filter((prod: Cart) => prod.id !== id))
   )
 }
+
+export const removeCart = (): void => {
+  localStorage.setItem('cart', JSON.stringify([]))
+}

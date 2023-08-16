@@ -1,7 +1,8 @@
 import { AfterContentChecked, Component, OnInit } from '@angular/core'
 import productsDB from '../../../database/products.json'
 import { Cart, Product } from 'src/app/interfaces'
-import { getCart } from 'src/app/helpers'
+import { getCart, removeCart } from 'src/app/helpers'
+import { Router } from '@angular/router'
 
 @Component({
   templateUrl: './cart-page.component.html',
@@ -12,6 +13,7 @@ export class CartPageComponent implements OnInit, AfterContentChecked {
   public recomendedProducts: Product[] = []
   public subtotal: number = 0
 
+  constructor(private router: Router) {}
   ngOnInit(): void {
     this.recomendedProducts = productsDB
       .sort((a, b) => 0.5 - Math.random())
@@ -26,5 +28,10 @@ export class CartPageComponent implements OnInit, AfterContentChecked {
     this.products.forEach((prod: Cart) => {
       this.subtotal += prod.price * prod.qty
     })
+  }
+
+  onRemoveAll() {
+    removeCart()
+    this.router.navigateByUrl('/')
   }
 }
