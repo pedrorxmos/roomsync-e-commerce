@@ -2,7 +2,7 @@
   <h1 class="h2">Your Cart</h1>
   <section class="main-section cart">
     <div class="cart-list">
-      <app-cart-item />
+      <app-cart-item *ngFor="let prod of products" [product]="prod" />
     </div>
     <div class="cart-sumary">
       <div class="cart-sumary__info">

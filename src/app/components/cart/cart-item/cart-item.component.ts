@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core'
+import { Cart } from 'src/app/interfaces'
 
 @Component({
   selector: 'app-cart-item',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./cart-item.component.scss']
 })
 export class CartItemComponent {
-
+  @Input()
+  public product!: Cart
 }
