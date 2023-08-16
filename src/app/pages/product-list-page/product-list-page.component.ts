@@ -14,7 +14,7 @@ import { materialFilter } from './material.filter'
 export class ProductListPageComponent implements OnInit {
   private categoryId?: string
   public category?: string
-  public products: Product[] = productsDB
+  public products: Product[] = productsDB as Product[]
   public initialProducts: Product[] = [] //This will be needed when reseting filters
 
   public colorFilterOptions: Color[] = []

@@ -1,0 +1,24 @@
+@import '../../../../scss/varibales';
+@import '../../../../scss/functions';
+@import '../../../../scss/mixins';
+
+.dropdown {
+  @include d-flex(column, 12px);
+  justify-content: stretch;
+
+  &-header {
+    background: $ash3;
+    border: none;
+    font-size: size(md);
+    @include d-flex(row, 0);
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px;
+    padding: 12px 24px;
+  }
+
+  &-content {
+    padding: 0 12px;
+    @include d-flex(column, 8px);
+  }
+}

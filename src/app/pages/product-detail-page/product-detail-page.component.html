@@ -69,8 +69,17 @@
       </header>
 
       <div class="product-detail__info__items">
-        <app-dropdown></app-dropdown>
-        <app-dropdown></app-dropdown>
+        <app-dropdown title="Description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Necessitatibus consequuntur ea adipisci ipsa sit sequi corporis, alias
+          hic. Sed, id libero! Dolorum, optio quae natus doloribus reprehenderit
+          alias quas iure!
+        </app-dropdown>
+        <app-dropdown title="Measures">
+          <span><b> Width: </b> {{ product?.info?.measures?.width }}</span>
+          <span><b> Height: </b> {{ product?.info?.measures?.height }}</span>
+          <span><b> Depth: </b> {{ product?.info?.measures?.depth }}</span>
+        </app-dropdown>
       </div>
 
       <div class="product-detail__info__actions">

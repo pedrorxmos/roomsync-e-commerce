@@ -6,7 +6,7 @@ import {
   OnInit
 } from '@angular/core'
 import { ActivatedRoute } from '@angular/router'
-import { Product } from 'src/app/interfaces'
+import { Measures, Product } from 'src/app/interfaces'
 import productsDB from '../../../database/products.json'
 
 @Component({
@@ -41,7 +41,7 @@ export class ProductDetailPageComponent implements OnInit, AfterContentChecked {
 
     this.recomendedProducts = productsDB.filter(
       (prod) => prod.category === this.product?.category
-    )
+    ) as Product[]
 
     this.imgUrl = `/assets/img/product/${this.product.subcategory}/${this.product.id}.webp`
 
