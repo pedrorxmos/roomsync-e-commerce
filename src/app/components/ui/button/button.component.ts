@@ -30,6 +30,9 @@ export class ButtonComponent implements OnInit {
   @Input({ alias: 'class' })
   public className?: string
 
+  @Input()
+  public disabled?: boolean
+
   public inlineClass: string = ''
   public svgSize: string = 'md'
 
