@@ -1,6 +1,6 @@
 <div class="cart-item">
   <div class="cart-item__header">
-    <button class="cart-item__header__remove">
+    <button class="cart-item__header__remove" (click)="onRemove()">
       <app-icon name="x" size="sm" />
     </button>
     <img [src]="imgUrl" [alt]="product.name" class="cart-item__header__img" />
@@ -14,12 +14,16 @@
     <div class="cart-item__actions__qty">
       <button
         class="cart-item__actions__qty__btn cart-item__actions__qty__btn-minus"
+        (click)="onInputQty(product.qty - 1)"
+        [disabled]="product.qty <= 1"
       >
         <app-icon size="sm" name="minus" />
       </button>
       <span>{{ product.qty }}</span>
       <button
         class="cart-item__actions__qty__btn cart-item__actions__qty__btn-plus"
+        (click)="onInputQty(product.qty + 1)"
+        [disabled]="product.qty >= 20"
       >
         <app-icon size="sm" name="plus" />
       </button>

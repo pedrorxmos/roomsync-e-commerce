@@ -43,3 +43,23 @@ export const getCartQtyLength = (): number => {
 
   return qty
 }
+
+export const updateCart = (id: string, qty: number) => {
+  let cart = getCart()
+
+  if (cart.find((prod: Cart) => prod.id === id)) {
+    cart = cart.map((prod: Cart) => {
+      if (prod.id === id) prod.qty = qty
+      return prod
+    })
+
+    localStorage.setItem('cart', JSON.stringify([...cart]))
+  }
+}
+
+export const removeFromCart = (id: string): void => {
+  localStorage.setItem(
+    'cart',
+    JSON.stringify(getCart().filter((prod: Cart) => prod.id !== id))
+  )
+}

@@ -21,6 +21,7 @@
       padding: 0;
       background: none;
       color: $grey4;
+      cursor: pointer;
     }
 
     &__img {
@@ -61,6 +62,11 @@
       align-items: center;
       padding-top: 12px;
 
+      span {
+        min-width: 16px;
+        text-align: center;
+      }
+
       @include mq(min-width, 900px) {
         padding-top: 0;
       }
@@ -70,6 +76,12 @@
         padding: 0;
         background: none;
         color: $grey2;
+        cursor: pointer;
+
+        &:disabled {
+          color: $grey5;
+          cursor: no-drop;
+        }
       }
     }
   }
