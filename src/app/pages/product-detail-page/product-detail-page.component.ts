@@ -21,6 +21,7 @@ export class ProductDetailPageComponent implements OnInit, AfterContentChecked {
   public stars = [1, 1, 1, 1, 1]
 
   public recomendedProducts: Product[] = []
+  public qty: number = 1
 
   constructor(private route: ActivatedRoute) {}
 
@@ -69,5 +70,21 @@ export class ProductDetailPageComponent implements OnInit, AfterContentChecked {
         : this.product.stars - 4 < 0
         ? 0
         : this.product.stars - 4
+  }
+
+  modifyQty(value: number) {
+    this.qty += value
+  }
+
+  onInputQty(value: number) {
+    if (value < 1) {
+      this.qty = 1
+      return
+    }
+    if (value > 20) {
+      this.qty = 20
+      return
+    }
+    this.qty = value
   }
 }

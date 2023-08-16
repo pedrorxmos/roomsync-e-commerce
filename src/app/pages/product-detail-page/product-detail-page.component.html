@@ -81,11 +81,33 @@
             leftIcon="heart"
             class="product-detail__info__actions__favorite"
           ></app-button>
-          <label class="product-detail__info__actions__qty">
-            <app-icon name="minus" size="sm"></app-icon>
-            <input type="number" name="quantity" id="quantity" value="1" />
-            <app-icon name="plus" size="sm"></app-icon>
-          </label>
+          <div class="product-detail__info__actions__qty">
+            <button
+              class="product-detail__info__actions__qty__btn"
+              (click)="modifyQty(-1)"
+              [disabled]="qty <= 1"
+            >
+              <app-icon name="minus" size="sm"></app-icon>
+            </button>
+
+            <input
+              #qtyInput
+              type="number"
+              name="quantity"
+              id="quantity"
+              [value]="qty"
+              min="1"
+              max="20"
+              (input)="onInputQty(+qtyInput.value)"
+            />
+            <button
+              class="product-detail__info__actions__qty__btn"
+              (click)="modifyQty(1)"
+              [disabled]="qty >= 20"
+            >
+              <app-icon name="plus" size="sm"></app-icon>
+            </button>
+          </div>
         </div>
 
         <app-button
