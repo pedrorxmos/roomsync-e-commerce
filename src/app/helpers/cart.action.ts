@@ -1,7 +1,11 @@
 import { Cart, Product } from '../interfaces/product.interface'
 
+export const getCart = (): Cart[] => {
+  return JSON.parse(localStorage.getItem('cart')!) || []
+}
+
 export const addToCart = (product: Product, qty: number): void => {
-  let cart = JSON.parse(localStorage.getItem('cart')!) || []
+  let cart = getCart()
 
   if (cart.find((prod: Cart) => prod.id === product.id)) {
     cart = cart.map((prod: Cart) => {
@@ -26,4 +30,15 @@ export const addToCart = (product: Product, qty: number): void => {
       }
     ])
   )
+}
+
+export const getCartQtyLength = (): number => {
+  let qty = 0
+
+  const cart = getCart()
+  cart.forEach((prod: Cart) => {
+    qty += prod.qty
+  })
+
+  return qty
 }
