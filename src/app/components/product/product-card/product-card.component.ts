@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core'
+import { addToCart } from 'src/app/helpers'
 import { Product } from 'src/app/interfaces'
 
 @Component({
@@ -49,11 +50,11 @@ export class ProductCardComponent implements OnInit {
         : this.product.stars - 4
   }
 
-  onLike() {
+  onLike(): void {
     console.log('like')
   }
 
-  onCart() {
-    console.log('cart')
+  onCart(): void {
+    addToCart(this.product, 1)
   }
 }

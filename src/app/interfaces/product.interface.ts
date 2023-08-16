@@ -33,3 +33,10 @@ export interface Material {
   id: string
   products: Product[]
 }
+
+export interface Cart {
+  name: string
+  id: string
+  qty: number
+  price: number
+}
