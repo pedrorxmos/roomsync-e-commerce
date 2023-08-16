@@ -45,5 +45,11 @@ main {
     @include mq(min-width, $tablet-max-mq) {
       gap: 40px;
     }
+
+    .section-header {
+      small {
+        font-size: size(sm);
+      }
+    }
   }
 }

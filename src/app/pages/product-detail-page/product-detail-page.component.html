@@ -1,2 +1,123 @@
-<p>product-detail-page works!</p>
-<span>{{ product?.name }}</span>
+<main>
+  <section class="product-detail">
+    <img [src]="imgUrl" [alt]="product?.name" class="product-detail__img" />
+    <div class="product-detail__info">
+      <header class="product-detail__info__header">
+        <div class="product-detail__info__header__title">
+          <h1 class="h2">{{ product?.name }}</h1>
+          <span [routerLink]="'/shop/' + product?.subcategory">
+            {{ product?.subcategory }}
+          </span>
+        </div>
+
+        <div
+          class="product-detail__info__header__stars product-detail__info__header__stars__long"
+        >
+          <div class="product-detail__info__header__stars__star">
+            <app-icon name="star" size="sm" class="star_btm"></app-icon>
+            <app-icon
+              name="star"
+              size="sm"
+              fill="orange"
+              class="star_top"
+              [style]="'--star-percentage: ' + stars[0] * 21 + 'px'"
+            ></app-icon>
+          </div>
+
+          <div class="product-detail__info__header__stars__star">
+            <app-icon name="star" size="sm" class="star_btm"></app-icon>
+            <app-icon
+              name="star"
+              size="sm"
+              fill="orange"
+              class="star_top"
+              [style]="'--star-percentage: ' + stars[1] * 21 + 'px'"
+            ></app-icon>
+          </div>
+
+          <div class="product-detail__info__header__stars__star">
+            <app-icon name="star" size="sm" class="star_btm"></app-icon>
+            <app-icon
+              name="star"
+              size="sm"
+              fill="orange"
+              class="star_top"
+              [style]="'--star-percentage: ' + stars[2] * 21 + 'px'"
+            ></app-icon>
+          </div>
+
+          <div class="product-detail__info__header__stars__star">
+            <app-icon name="star" size="sm" class="star_btm"></app-icon>
+            <app-icon
+              name="star"
+              size="sm"
+              fill="orange"
+              class="star_top"
+              [style]="'--star-percentage: ' + stars[3] * 21 + 'px'"
+            ></app-icon>
+          </div>
+
+          <div class="product-detail__info__header__stars__star">
+            <app-icon name="star" size="sm" class="star_btm"></app-icon>
+            <app-icon
+              name="star"
+              size="sm"
+              fill="orange"
+              class="star_top"
+              [style]="'--star-percentage: ' + stars[4] * 21 + 'px'"
+            ></app-icon>
+          </div>
+        </div>
+
+        <div
+          class="product-detail__info__header__stars product-detail__info__header__stars__short"
+        >
+          <small>{{ product?.stars }}/5</small>
+          <div class="product-detail__info__header__stars__star">
+            <app-icon name="star" size="sm" class="star_btm"></app-icon>
+            <app-icon
+              name="star"
+              size="sm"
+              fill="orange"
+              class="star_top"
+              [style]="'--star-percentage: ' + (product!.stars / 5) * 21 + 'px'"
+            ></app-icon>
+          </div>
+        </div>
+      </header>
+
+      <div class="product-detail__items">
+        <app-dropdown></app-dropdown>
+        <app-dropdown></app-dropdown>
+      </div>
+
+      <div class="product-detail__actions">
+        <app-button
+          type="secondary"
+          size="sm"
+          leftIcon="heart"
+          class="product-detail__actions__favorite"
+        ></app-button>
+        <button class="product-detail__actions__qty">
+          <app-icon name="minus" size="sm"></app-icon>
+          <input type="number" name="quantity" id="quantity" />
+          <app-icon name="plus" size="sm"></app-icon>
+        </button>
+        <app-button
+          type="primary"
+          size="sm"
+          class="product-detail__actions__cart"
+          >Add to cart</app-button
+        >
+      </div>
+    </div>
+  </section>
+
+  <section class="main-section product-recomendations">
+    <header class="section-header">
+      <h2>You might be interested</h2>
+      <small>We thoght you might like these...</small>
+    </header>
+    <app-product-slider [products]="recomendedProducts" />
+  </section>
+</main>
