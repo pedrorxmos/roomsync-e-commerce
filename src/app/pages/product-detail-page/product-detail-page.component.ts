@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core'
+import {
+  AfterContentChecked,
+  AfterViewChecked,
+  AfterViewInit,
+  Component,
+  OnInit
+} from '@angular/core'
 import { ActivatedRoute } from '@angular/router'
 import { Product } from 'src/app/interfaces'
 import productsDB from '../../../database/products.json'
@@ -8,7 +14,7 @@ import productsDB from '../../../database/products.json'
   templateUrl: './product-detail-page.component.html',
   styleUrls: ['./product-detail-page.component.scss']
 })
-export class ProductDetailPageComponent implements OnInit {
+export class ProductDetailPageComponent implements OnInit, AfterContentChecked {
   public productId!: string
   public product?: Product
   public imgUrl?: string = ``
@@ -17,7 +23,16 @@ export class ProductDetailPageComponent implements OnInit {
   public recomendedProducts: Product[] = []
 
   constructor(private route: ActivatedRoute) {}
+
+  ngAfterContentChecked(): void {
+    this.loadContent()
+  }
+
   ngOnInit(): void {
+    this.loadContent()
+  }
+
+  private loadContent() {
     this.route.params.subscribe((params) => (this.productId = params['id']))
     this.product = productsDB.find(
       (prod) => prod.id === this.productId

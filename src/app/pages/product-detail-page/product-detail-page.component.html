@@ -86,27 +86,27 @@
         </div>
       </header>
 
-      <div class="product-detail__items">
+      <div class="product-detail__info__items">
         <app-dropdown></app-dropdown>
         <app-dropdown></app-dropdown>
       </div>
 
-      <div class="product-detail__actions">
+      <div class="product-detail__info__actions">
         <app-button
           type="secondary"
           size="sm"
           leftIcon="heart"
-          class="product-detail__actions__favorite"
+          class="product-detail__info__actions__favorite"
         ></app-button>
-        <button class="product-detail__actions__qty">
+        <div class="product-detail__info__actions__qty">
           <app-icon name="minus" size="sm"></app-icon>
-          <input type="number" name="quantity" id="quantity" />
+          <input type="number" name="quantity" id="quantity" value="1" />
           <app-icon name="plus" size="sm"></app-icon>
-        </button>
+        </div>
         <app-button
           type="primary"
           size="sm"
-          class="product-detail__actions__cart"
+          class="product-detail__info__actions__cart"
           >Add to cart</app-button
         >
       </div>

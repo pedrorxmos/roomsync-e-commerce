@@ -1,0 +1,121 @@
+@import '../../../scss/varibales';
+@import '../../../scss/functions';
+@import '../../../scss/mixins';
+
+.product-detail {
+  @include d-flex(row, 32px);
+
+  &__img {
+    width: 37.9vw;
+    height: 37.9vw;
+    border-radius: 24px;
+    box-shadow: 1px 4px 10px rgba($black, 0.1);
+
+    @include mq(min-width, $mobile-max-mq) {
+      border-radius: 32px;
+    }
+
+    @include mq(min-width, $tablet-max-mq) {
+      border-radius: 36px;
+    }
+  }
+
+  &__info {
+    flex: 1;
+    width: 100%;
+    @include d-flex(column, 24px);
+
+    &__header {
+      width: 100%;
+      @include d-flex(row, 24px);
+      justify-content: space-between;
+
+      &__title {
+        span {
+          text-transform: capitalize;
+        }
+      }
+
+      &__stars {
+        @include d-flex(row, 3px);
+        align-items: center;
+
+        &__short {
+          display: flex;
+          @include mq(min-width, $small-card-max-mq) {
+            display: none;
+          }
+        }
+
+        &__long {
+          display: none;
+          @include mq(min-width, $small-card-max-mq) {
+            display: flex;
+          }
+        }
+
+        &__star {
+          position: relative;
+
+          .star_btm {
+            color: $grey5;
+          }
+
+          .star_top {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: var(--star-percentage);
+            overflow: hidden;
+            // @include prefix(transform, (translateX(58%)));
+          }
+        }
+      }
+    }
+
+    &__items {
+      @include d-flex(column, 12px);
+      width: 100%;
+    }
+
+    &__actions {
+      @include d-flex(row, 8px);
+
+      &__qty {
+        border: 2px solid $ash1;
+        border-radius: 16px;
+        padding: 12px;
+        @include d-flex(row, 4px);
+        align-items: center;
+        color: $grey2;
+
+        input {
+          appearance: textfield;
+          -webkit-appearance: textfield;
+          -moz-appearance: textfield;
+          width: 24px;
+          border: none;
+          background: none;
+          font-family: $font-family;
+          color: $black;
+          font-size: size(md);
+          text-align: center;
+          margin: 0;
+
+          &::-webkit-outer-spin-button,
+          &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+      &__cart {
+        flex: 1;
+      }
+    }
+  }
+}
