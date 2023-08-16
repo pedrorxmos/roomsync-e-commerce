@@ -1,1 +1,33 @@
-<p>cart-page works!</p>
+<main>
+  <h1 class="h2">Your Cart</h1>
+  <section class="main-section cart">
+    <div class="cart-list">
+      <app-cart-item />
+    </div>
+    <div class="cart-sumary">
+      <div class="cart-sumary__info">
+        <h2 class="h3">Order Sumary</h2>
+        <div class="cart-sumary__info__item cart-sumary__info__item__subtotal">
+          <span>Subtotal:</span>
+          <span>999.99 $</span>
+        </div>
+        <div class="cart-sumary__info__item cart-sumary__info__item__tax">
+          <span>Price without IVA:</span>
+          <span>999.99 $</span>
+        </div>
+        <div class="cart-sumary__info__item cart-sumary__info__item__tax">
+          <span>IVA:</span>
+          <span>99.99 $</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="main-section cart-recomendations">
+    <header class="section-header">
+      <h2>You might be interested</h2>
+      <small>We thoght you might like these...</small>
+    </header>
+    <app-product-slider [products]="recomendedProducts" />
+  </section>
+</main>
