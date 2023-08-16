@@ -79,7 +79,7 @@
     }
 
     &__items {
-      @include d-flex(column, 12px);
+      @include d-flex(column, 6px);
       width: 100%;
     }
 
