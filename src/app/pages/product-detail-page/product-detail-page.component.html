@@ -70,10 +70,7 @@
 
       <div class="product-detail__info__items">
         <app-dropdown title="Description" [isOpen]="true">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus consequuntur ea adipisci ipsa sit sequi corporis, alias
-          hic. Sed, id libero! Dolorum, optio quae natus doloribus reprehenderit
-          alias quas iure!
+          {{ product?.info?.description }}
         </app-dropdown>
         <app-dropdown title="Measures">
           <span><b> Width: </b> {{ product?.info?.measures?.width }}</span>

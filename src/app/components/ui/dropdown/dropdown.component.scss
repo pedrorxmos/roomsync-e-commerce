@@ -10,12 +10,14 @@
     background: $ash3;
     border: none;
     font-size: size(md);
+    font-family: $font-family;
     @include d-flex(row, 0);
     justify-content: space-between;
     align-items: center;
     border-radius: 12px;
     padding: 12px 24px;
     cursor: pointer;
+    font-weight: 600;
 
     &__icon {
       @include prefix(transform, (rotateX(0deg)));
