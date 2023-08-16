@@ -40,7 +40,8 @@ export class ProductDetailPageComponent implements OnInit, AfterContentChecked {
     ) as Product
 
     this.recomendedProducts = productsDB.filter(
-      (prod) => prod.category === this.product?.category
+      (prod) =>
+        prod.category === this.product?.category && prod.id !== this.product.id
     ) as Product[]
 
     this.imgUrl = `/assets/img/product/${this.product.subcategory}/${this.product.id}.webp`
