@@ -1,12 +1,12 @@
 <div class="cart-item">
   <div class="cart-item__header">
     <button class="cart-item__header__remove">
-      <app-icon name="x" size="md" />
+      <app-icon name="x" size="sm" />
     </button>
     <img [src]="imgUrl" [alt]="product.name" class="cart-item__header__img" />
     <div class="cart-item__header__info">
-      <span>{{ product.name }}</span>
-      <span>{{ product.price }} $</span>
+      <span class="title">{{ product.name }}</span>
+      <span>{{ product.price | number: '1.2-2' }} $</span>
     </div>
   </div>
 

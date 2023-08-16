@@ -10,6 +10,7 @@
 
   &-list {
     flex: 1;
+    @include d-flex(column, 12px);
   }
 
   &-sumary {
