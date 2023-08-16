@@ -10,9 +10,7 @@
           </span>
         </div>
 
-        <div
-          class="product-detail__info__header__stars product-detail__info__header__stars__long"
-        >
+        <div class="product-detail__info__header__stars">
           <div class="product-detail__info__header__stars__star">
             <app-icon name="star" size="sm" class="star_btm"></app-icon>
             <app-icon
@@ -68,22 +66,6 @@
             ></app-icon>
           </div>
         </div>
-
-        <div
-          class="product-detail__info__header__stars product-detail__info__header__stars__short"
-        >
-          <small>{{ product?.stars }}/5</small>
-          <div class="product-detail__info__header__stars__star">
-            <app-icon name="star" size="sm" class="star_btm"></app-icon>
-            <app-icon
-              name="star"
-              size="sm"
-              fill="orange"
-              class="star_top"
-              [style]="'--star-percentage: ' + (product!.stars / 5) * 21 + 'px'"
-            ></app-icon>
-          </div>
-        </div>
       </header>
 
       <div class="product-detail__info__items">
@@ -92,17 +74,20 @@
       </div>
 
       <div class="product-detail__info__actions">
-        <app-button
-          type="secondary"
-          size="sm"
-          leftIcon="heart"
-          class="product-detail__info__actions__favorite"
-        ></app-button>
-        <div class="product-detail__info__actions__qty">
-          <app-icon name="minus" size="sm"></app-icon>
-          <input type="number" name="quantity" id="quantity" value="1" />
-          <app-icon name="plus" size="sm"></app-icon>
+        <div class="product-detail__info__actions__group">
+          <app-button
+            type="secondary"
+            size="sm"
+            leftIcon="heart"
+            class="product-detail__info__actions__favorite"
+          ></app-button>
+          <label class="product-detail__info__actions__qty">
+            <app-icon name="minus" size="sm"></app-icon>
+            <input type="number" name="quantity" id="quantity" value="1" />
+            <app-icon name="plus" size="sm"></app-icon>
+          </label>
         </div>
+
         <app-button
           type="primary"
           size="sm"
