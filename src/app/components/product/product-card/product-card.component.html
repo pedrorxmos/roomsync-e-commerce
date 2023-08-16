@@ -1,6 +1,15 @@
-<article [class]="'product-card ' + className">
-  <div class="product-card-info">
-    <img [src]="imgUrl" [alt]="product.name" class="product-card-info__img" />
+<button [class]="'product-card ' + className">
+  <button
+    class="product-card-info"
+    [routerLink]="'/product/' + product.id"
+    [disabled]="disabled"
+  >
+    <img
+      [src]="imgUrl"
+      [alt]="product.name"
+      class="product-card-info__img"
+      draggable="false"
+    />
     <h4 class="product-card-info__title">{{ product.name }}</h4>
     <div class="product-card-info__subtitle">
       <span class="product-card-info__subtitle__price"
@@ -80,7 +89,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </button>
 
   <div class="product-card-actions">
     <app-button
@@ -88,6 +97,8 @@
       size="sm"
       leftIcon="heart"
       class="product-card-actions__favorite"
+      (click)="onLike()"
+      [disabled]="disabled"
     ></app-button>
 
     <app-button
@@ -95,9 +106,16 @@
       size="md"
       leftIcon="shopping-cart"
       class="product-card-actions__cart__small"
+      (click)="onCart()"
+      [disabled]="disabled"
     />
-    <app-button type="primary" size="sm" class="product-card-actions__cart"
+    <app-button
+      type="primary"
+      size="sm"
+      class="product-card-actions__cart"
+      (click)="onCart()"
+      [disabled]="disabled"
       >Add to cart</app-button
     >
   </div>
-</article>
+</button>

@@ -5,21 +5,23 @@
 .product-card {
   @include d-flex(column, 32px);
   flex: 1;
-  padding: 20px 24px;
+  padding: 0 0 20px 0;
   background-color: $pure-white;
   box-shadow: 1px 4px 10px rgba($black, 0.1);
   border-radius: 28px;
   max-width: 107px + 24px + 24px;
-  cursor: pointer;
+  border: none;
+  color: $black;
+  overflow: hidden;
 
   @include mq(min-width, $small-card-max-mq) {
-    padding: 24px 28px;
+    padding-bottom: 24px;
     border-radius: 38px;
     max-width: 172px + 28px + 28px;
   }
 
   @include mq(min-width, $medium-card-max-mq) {
-    padding: 32px 48px;
+    padding-bottom: 48px;
     border-radius: 48px;
     max-width: 200px + 48px + 48px;
   }
@@ -27,12 +29,36 @@
   &-info {
     @include d-flex(column, 12px);
     justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+    border: none;
+    color: $black;
+    background: none;
+    padding: 20px 24px 0;
+    cursor: pointer;
+
+    @include mq(min-width, $small-card-max-mq) {
+      padding: 24px 28px 0;
+    }
+
+    @include mq(min-width, $medium-card-max-mq) {
+      padding: 32px 48px 0;
+    }
 
     &__title {
       font-size: size(md);
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
+      max-width: 107px;
+
+      @include mq(min-width, $small-card-max-mq) {
+        max-width: 172px;
+      }
+
+      @include mq(min-width, $medium-card-max-mq) {
+        max-width: 200px;
+      }
     }
 
     &__img {
@@ -110,6 +136,15 @@
     width: 100%;
     justify-content: center;
     align-items: center;
+    padding: 0 20px;
+
+    @include mq(min-width, $small-card-max-mq) {
+      padding: 0 28px;
+    }
+
+    @include mq(min-width, $medium-card-max-mq) {
+      padding: 0 48px;
+    }
 
     &__cart {
       flex: 1;

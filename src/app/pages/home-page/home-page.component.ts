@@ -11,5 +11,5 @@ export class HomePageComponent {
   public categories?: Category[] = categoriesDB
   public products: Product[] = productsDB
     .sort((a, b) => b.stars - a.stars)
-    .slice(0, 12)
+    .slice(0, 12) as Product[]
 }

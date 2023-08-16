@@ -1,11 +1,8 @@
-<div
-  class="product-slider"
-  data-flickity='{ "cellAlign": "center", "contain": true, "wrapAround": true, "groupCells": true }'
->
+<div #productSlider class="product-slider">
   <app-product-card
-    #slider
     *ngFor="let prod of products"
     [product]="prod"
     class="slider-card"
+    [disabled]="mouseDown"
   ></app-product-card>
 </div>

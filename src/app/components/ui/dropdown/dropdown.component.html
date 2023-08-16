@@ -1,1 +1,13 @@
-<p>dropdown works!</p>
+<div [class]="'dropdown ' + (isOpen ? 'open' : '')">
+  <button class="dropdown-header" (click)="onToggle()">
+    <span class="dropdown-header__title">{{ title }}</span>
+    <app-icon name="chevron-down" size="sm" class="dropdown-header__icon" />
+  </button>
+  <div
+    #content
+    class="dropdown-content"
+    [style]="'--max-height: ' + content.scrollHeight + 'px'"
+  >
+    <ng-content />
+  </div>
+</div>

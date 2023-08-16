@@ -13,6 +13,9 @@ export class ProductCardComponent implements OnInit {
   @Input()
   public className?: string
 
+  @Input()
+  public disabled?: boolean
+
   public imgUrl = ''
   public stars = [1, 1, 1, 1, 1]
 
@@ -44,5 +47,13 @@ export class ProductCardComponent implements OnInit {
         : this.product.stars - 4 < 0
         ? 0
         : this.product.stars - 4
+  }
+
+  onLike() {
+    console.log('like')
+  }
+
+  onCart() {
+    console.log('cart')
   }
 }
