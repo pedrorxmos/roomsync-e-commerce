@@ -9,15 +9,15 @@
         <h2 class="h3 cart-sumary__info__title">Order Sumary</h2>
         <div class="cart-sumary__info__item cart-sumary__info__item__subtotal">
           <span>Subtotal:</span>
-          <span>999.99 $</span>
+          <span>{{ subtotal | number: '1.2-2' }} $</span>
         </div>
         <div class="cart-sumary__info__item cart-sumary__info__item__tax">
           <span>Price without IVA:</span>
-          <span>999.99 $</span>
+          <span>{{ subtotal * 0.79 | number: '1.2-2' }} $</span>
         </div>
         <div class="cart-sumary__info__item cart-sumary__info__item__tax">
-          <span>IVA:</span>
-          <span>99.99 $</span>
+          <span>IVA (21%):</span>
+          <span>{{ subtotal * 0.21 | number: '1.2-2' }}$</span>
         </div>
       </div>
 

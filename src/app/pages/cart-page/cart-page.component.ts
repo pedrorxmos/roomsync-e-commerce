@@ -20,5 +20,11 @@ export class CartPageComponent implements OnInit, AfterContentChecked {
 
   ngAfterContentChecked(): void {
     this.products = getCart()
+
+    this.subtotal = 0
+
+    this.products.forEach((prod: Cart) => {
+      this.subtotal += prod.price * prod.qty
+    })
   }
 }
