@@ -1,1 +1,32 @@
-<p>{{ product.name }} - {{ product.qty }} - {{ product.price }}</p>
+<div class="cart-item">
+  <div class="cart-item__header">
+    <button class="cart-item__header__remove">
+      <app-icon name="x" size="md" />
+    </button>
+    <img [src]="imgUrl" [alt]="product.name" class="cart-item__header__img" />
+    <div class="cart-item__header__info">
+      <span>{{ product.name }}</span>
+      <span>{{ product.price }} $</span>
+    </div>
+  </div>
+
+  <div class="cart-item__actions">
+    <div class="cart-item__actions__qty">
+      <button
+        class="cart-item__actions__qty__btn cart-item__actions__qty__btn-minus"
+      >
+        <app-icon size="sm" name="minus" />
+      </button>
+      <span>{{ product.qty }}</span>
+      <button
+        class="cart-item__actions__qty__btn cart-item__actions__qty__btn-plus"
+      >
+        <app-icon size="sm" name="plus" />
+      </button>
+    </div>
+
+    <span class="cart-item__actions__price">
+      {{ product.price * product.qty | number: '1.2-2' }} $
+    </span>
+  </div>
+</div>

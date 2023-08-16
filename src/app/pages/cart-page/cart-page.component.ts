@@ -10,6 +10,7 @@ import { getCart } from 'src/app/helpers'
 export class CartPageComponent implements OnInit, AfterContentChecked {
   public products: Cart[] = getCart()
   public recomendedProducts: Product[] = []
+  public subtotal: number = 0
 
   ngOnInit(): void {
     this.recomendedProducts = productsDB

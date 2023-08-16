@@ -25,7 +25,8 @@ export const addToCart = (product: Product, qty: number): void => {
       {
         name: product.name,
         id: product.id,
-        price: product.id,
+        price: product.price,
+        subcategory: product.subcategory,
         qty
       }
     ])
