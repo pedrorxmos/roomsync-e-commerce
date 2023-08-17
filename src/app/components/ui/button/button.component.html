@@ -1,7 +1,7 @@
 <button
   *ngIf="isLink === undefined"
   [class]="inlineClass"
-  (click)="action()"
+  (click)="onClick()"
   [disabled]="disabled"
 >
   <ng-container *ngTemplateOutlet="btnValue"></ng-container>

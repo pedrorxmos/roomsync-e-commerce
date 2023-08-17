@@ -1,0 +1,88 @@
+@import '../../../../scss/varibales';
+@import '../../../../scss/functions';
+@import '../../../../scss/mixins';
+
+.cart-item {
+  @include d-flex(row, 12px);
+  justify-content: space-between;
+  align-items: center;
+  background-color: $pure-white;
+  border-radius: 16px;
+  box-shadow: 1px 2px 5px rgba($black, 0.1);
+  padding: 8px 16px;
+
+  &__header {
+    @include d-flex(row, 8px);
+    justify-content: flex-start;
+    align-items: center;
+
+    &__remove {
+      border: none;
+      padding: 0;
+      background: none;
+      color: $grey4;
+      cursor: pointer;
+    }
+
+    &__img {
+      width: 48px;
+      height: 48px;
+    }
+
+    &__info {
+      @include d-flex(column, 4px);
+      .title {
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__actions {
+    @include d-flex(column, 8px);
+    justify-content: flex-start;
+    align-items: center;
+
+    @include mq(min-width, 900px) {
+      flex-direction: row;
+      gap: 16px;
+    }
+
+    &__price {
+      padding-bottom: 4px;
+      font-weight: 600;
+
+      @include mq(min-width, 900px) {
+        padding-bottom: 0;
+      }
+    }
+
+    &__qty {
+      @include d-flex(row, 4px);
+      justify-content: flex-start;
+      align-items: center;
+      padding-top: 12px;
+
+      span {
+        min-width: 16px;
+        text-align: center;
+      }
+
+      @include mq(min-width, 900px) {
+        padding-top: 0;
+      }
+
+      &__btn {
+        border: none;
+        padding: 0;
+        background: none;
+        color: $grey2;
+        cursor: pointer;
+
+        &:disabled {
+          color: $grey5;
+          cursor: no-drop;
+        }
+      }
+    }
+  }
+}

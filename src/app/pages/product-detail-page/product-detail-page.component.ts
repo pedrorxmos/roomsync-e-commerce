@@ -8,6 +8,7 @@ import {
 import { ActivatedRoute } from '@angular/router'
 import { Measures, Product } from 'src/app/interfaces'
 import productsDB from '../../../database/products.json'
+import { addToCart } from 'src/app/helpers'
 
 @Component({
   selector: 'product-detal-page',
@@ -87,5 +88,9 @@ export class ProductDetailPageComponent implements OnInit, AfterContentChecked {
       return
     }
     this.qty = value
+  }
+
+  onCart(): void {
+    addToCart(this.product!, this.qty)
   }
 }

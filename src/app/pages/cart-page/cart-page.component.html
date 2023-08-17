@@ -1,1 +1,41 @@
-<p>cart-page works!</p>
+<main>
+  <h1 class="h2">Your Cart</h1>
+  <section class="main-section cart">
+    <div class="cart-list">
+      <app-cart-item *ngFor="let prod of products" [product]="prod" />
+    </div>
+    <div class="cart-sumary">
+      <div class="cart-sumary__info">
+        <h2 class="h3 cart-sumary__info__title">Order Sumary</h2>
+        <div class="cart-sumary__info__item cart-sumary__info__item__subtotal">
+          <span>Subtotal:</span>
+          <span>{{ subtotal | number: '1.2-2' }} $</span>
+        </div>
+        <div class="cart-sumary__info__item cart-sumary__info__item__tax">
+          <span>Price without IVA:</span>
+          <span>{{ subtotal * 0.79 | number: '1.2-2' }} $</span>
+        </div>
+        <div class="cart-sumary__info__item cart-sumary__info__item__tax">
+          <span>IVA (21%):</span>
+          <span>{{ subtotal * 0.21 | number: '1.2-2' }}$</span>
+        </div>
+      </div>
+
+      <app-button
+        type="primary"
+        size="sm"
+        (click)="onRemoveAll()"
+        routerLink="/"
+        >Checkout</app-button
+      >
+    </div>
+  </section>
+
+  <section class="main-section cart-recomendations">
+    <header class="section-header">
+      <h2>You might be interested</h2>
+      <small>We thoght you might like these...</small>
+    </header>
+    <app-product-slider [products]="recomendedProducts" />
+  </section>
+</main>

@@ -1,0 +1,44 @@
+@import '../../../scss/varibales';
+@import '../../../scss/functions';
+@import '../../../scss/mixins';
+.cart {
+  @include d-flex(column, 32px);
+
+  @include mq(min-width, 800px) {
+    flex-direction: row;
+  }
+
+  &-list {
+    flex: 1;
+    @include d-flex(column, 12px);
+  }
+
+  &-sumary {
+    @include d-flex(column, 32px);
+
+    @include mq(min-width, 800px) {
+      min-width: 320px;
+    }
+
+    &__info {
+      &__title {
+        padding-bottom: 12px;
+      }
+
+      &__item {
+        @include d-flex(row, 6px);
+        justify-content: space-between;
+
+        &__subtotal {
+          font-weight: 600;
+          font-size: size(lg);
+          padding: 0 0 4px;
+        }
+
+        &__tax {
+          padding: 0 0 0 12px;
+        }
+      }
+    }
+  }
+}

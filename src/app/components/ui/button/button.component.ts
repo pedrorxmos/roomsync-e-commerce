@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core'
+import { Component, EventEmitter, Input, OnInit } from '@angular/core'
 
 @Component({
   selector: 'app-button',
@@ -19,7 +19,7 @@ export class ButtonComponent implements OnInit {
   public url!: string
 
   @Input()
-  public action!: (args?: any) => any
+  public action: EventEmitter<any> = new EventEmitter<any>()
 
   @Input()
   public leftIcon?: string
@@ -42,5 +42,9 @@ export class ButtonComponent implements OnInit {
     }`
 
     this.svgSize = this.size.slice(-2)
+  }
+
+  onClick() {
+    this.action.emit()
   }
 }

@@ -18,6 +18,7 @@
     padding: 12px 24px;
     cursor: pointer;
     font-weight: 600;
+    color: $black;
 
     &__icon {
       @include prefix(transform, (rotateX(0deg)));
