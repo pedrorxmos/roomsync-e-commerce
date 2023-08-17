@@ -137,6 +137,7 @@
     justify-content: center;
     align-items: center;
     padding: 0 20px;
+    z-index: 20;
 
     @include mq(min-width, $small-card-max-mq) {
       padding: 0 28px;

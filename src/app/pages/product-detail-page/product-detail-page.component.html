@@ -85,6 +85,8 @@
             type="secondary"
             size="sm"
             leftIcon="heart"
+            [fill]="isFav === true ? '#e95050' : undefined"
+            (click)="onLike()"
             class="product-detail__info__actions__favorite"
           ></app-button>
           <div class="product-detail__info__actions__qty">
