@@ -16,7 +16,9 @@ import { innerSvg } from './svg.icons'
   templateUrl: './icon.component.html',
   styleUrls: ['./icon.component.scss']
 })
-export class IconComponent implements AfterViewInit, OnInit {
+export class IconComponent
+  implements AfterViewInit, OnInit, AfterContentChecked
+{
   @Input({ required: true })
   public name!: string
 
@@ -46,6 +48,12 @@ export class IconComponent implements AfterViewInit, OnInit {
   }
 
   ngOnInit(): void {
+    this.inlineClass = `icon icon-${this.size} feather feather-${this.name} ${
+      this.className ? this.className : ''
+    } ${this.fill ? 'icon-fill' : ''}`
+  }
+
+  ngAfterContentChecked(): void {
     this.inlineClass = `icon icon-${this.size} feather feather-${this.name} ${
       this.className ? this.className : ''
     } ${this.fill ? 'icon-fill' : ''}`

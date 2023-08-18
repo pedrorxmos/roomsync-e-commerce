@@ -8,7 +8,7 @@ import {
 import { ActivatedRoute } from '@angular/router'
 import { Measures, Product } from 'src/app/interfaces'
 import productsDB from '../../../database/products.json'
-import { addToCart } from 'src/app/helpers'
+import { addToCart, getFavorites, updateFavorites } from 'src/app/helpers'
 
 @Component({
   selector: 'product-detal-page',
@@ -23,15 +23,25 @@ export class ProductDetailPageComponent implements OnInit, AfterContentChecked {
 
   public recomendedProducts: Product[] = []
   public qty: number = 1
+  public isFav: boolean = false
 
   constructor(private route: ActivatedRoute) {}
 
   ngAfterContentChecked(): void {
     this.loadContent()
+    this.checkIfFav()
   }
 
   ngOnInit(): void {
     this.loadContent()
+    this.checkIfFav()
+  }
+
+  checkIfFav(): void {
+    this.isFav = false
+    getFavorites().forEach((prod: Product) => {
+      if (prod.id === this.product?.id) this.isFav = true
+    })
   }
 
   private loadContent() {
@@ -92,5 +102,9 @@ export class ProductDetailPageComponent implements OnInit, AfterContentChecked {
 
   onCart(): void {
     addToCart(this.product!, this.qty)
+  }
+
+  onLike(): void {
+    updateFavorites(this.product!)
   }
 }

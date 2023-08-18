@@ -40,8 +40,8 @@
           <span class="nav-item__title">Catalog</span>
         </li>
         <li
-          class="nav-item nav-item__after"
-          attr-content="18"
+          [class]="'nav-item ' + (favorites > 0 ? 'nav-item__after' : '')"
+          [attr.attr-content]="favorites"
           routerLink="favorites"
         >
           <app-icon

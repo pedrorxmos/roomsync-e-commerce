@@ -1,4 +1,4 @@
-import { getCartQtyLength } from './../../../helpers'
+import { getCartQtyLength, getFavorites } from './../../../helpers'
 import {
   Component,
   ViewChild,
@@ -15,6 +15,7 @@ export class TopbarComponent implements AfterContentChecked {
   @ViewChild('searchBar') private searchBar!: ElementRef
 
   public cartProducts: number = getCartQtyLength()
+  public favorites: number = getFavorites().length
 
   onToggleSearch() {
     this.searchBar.nativeElement.classList.toggle('open')
@@ -22,5 +23,6 @@ export class TopbarComponent implements AfterContentChecked {
 
   ngAfterContentChecked(): void {
     this.cartProducts = getCartQtyLength()
+    this.favorites = getFavorites().length
   }
 }

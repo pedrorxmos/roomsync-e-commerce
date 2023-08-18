@@ -33,6 +33,9 @@ export class ButtonComponent implements OnInit {
   @Input()
   public disabled?: boolean
 
+  @Input()
+  public fill?: string
+
   public inlineClass: string = ''
   public svgSize: string = 'md'
 

@@ -60,6 +60,6 @@ export class ProductFilterComponent {
     this.route.queryParams.subscribe((params) => {
       this.isActive = params[this.type] !== undefined
     })
-    console.log(this.type, this.isActive)
+    // console.log(this.type, this.isActive)
   }
 }

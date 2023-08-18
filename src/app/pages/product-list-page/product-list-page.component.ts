@@ -1,10 +1,16 @@
-import { Component, OnInit, Injectable } from '@angular/core'
+import {
+  Component,
+  OnInit,
+  Injectable,
+  AfterContentChecked
+} from '@angular/core'
 import { ActivatedRoute, Params, Router } from '@angular/router'
 import categoriesDB from '../../../database/categories.json'
 import productsDB from '../../../database/products.json'
 import { Color, Material, Product } from 'src/app/interfaces'
 import { colorFilter } from './color.filter'
 import { materialFilter } from './material.filter'
+import { getFavorites } from 'src/app/helpers'
 
 @Component({
   selector: 'product-list-page',
@@ -16,6 +22,7 @@ export class ProductListPageComponent implements OnInit {
   public category?: string
   public products: Product[] = productsDB as Product[]
   public initialProducts: Product[] = [] //This will be needed when reseting filters
+  public pageName: string = 'shop'
 
   public colorFilterOptions: Color[] = []
   public materialFilterOptions: Material[] = []
@@ -30,6 +37,8 @@ export class ProductListPageComponent implements OnInit {
       (params) => (this.categoryId = params['category'])
     )
 
+    this.pageName = this.route.routeConfig?.path || ''
+
     if (this.categoryId) {
       this.category = categoriesDB.filter(
         (cat) => cat.id === this.categoryId
@@ -39,6 +48,8 @@ export class ProductListPageComponent implements OnInit {
         (prod) => prod.subcategory === this.categoryId
       )
     }
+
+    if (this.pageName === 'favorites') this.products = getFavorites()
 
     this.initialProducts = [...this.products]
 

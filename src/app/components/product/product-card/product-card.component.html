@@ -96,7 +96,8 @@
       type="secondary"
       size="sm"
       leftIcon="heart"
-      class="product-card-actions__favorite"
+      [fill]="isFav === true ? '#e95050' : undefined"
+      class="'product-card-actions__favorite"
       (click)="onLike()"
       [disabled]="disabled"
     ></app-button>
