@@ -50,7 +50,6 @@ describe('CategoryComponent', () => {
     component.ngAfterViewInit()
     fixture.detectChanges()
 
-    console.log(compiled)
     expect(
       compiled.querySelector('.category-card .card-icon svg')?.innerHTML
     ).toContain(decorationInnerSvg)
