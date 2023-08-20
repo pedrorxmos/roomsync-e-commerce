@@ -20,4 +20,21 @@ describe('FooterComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy()
   })
+
+  it('should render name and subtitle', () => {
+    const compiled = fixture.nativeElement as HTMLElement
+    expect(compiled.querySelector('.header-title')?.textContent).toEqual(
+      'RoomSync'
+    )
+    expect(compiled.querySelector('.header-subtitle')?.textContent).toEqual(
+      'Need a change?'
+    )
+  })
+
+  it('should render copyright notice', () => {
+    const compiled = fixture.nativeElement as HTMLElement
+    expect(compiled.querySelector('.copyright-text')?.textContent).toEqual(
+      '© 2023 RoomSync. All rights reserved.'
+    )
+  })
 })
