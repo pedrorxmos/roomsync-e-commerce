@@ -85,7 +85,7 @@ export class ProductDetailPageComponent implements OnInit, AfterContentChecked {
   }
 
   modifyQty(value: number) {
-    if (this.qty > 1 && this.qty < 20) this.qty += value
+    if (this.qty + value >= 1 && this.qty + value <= 20) this.qty += value
   }
 
   onInputQty(value: number) {
