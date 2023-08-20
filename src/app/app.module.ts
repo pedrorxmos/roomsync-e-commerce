@@ -13,7 +13,6 @@ import {
   ProductCardComponent,
   ProductFilterComponent,
   ProductSliderComponent,
-  StarsRateComponent,
   TopbarComponent
 } from './components'
 import {
@@ -39,7 +38,6 @@ import {
     ProductFilterComponent,
     ProductListPageComponent,
     ProductSliderComponent,
-    StarsRateComponent,
     TopbarComponent
   ],
   imports: [BrowserModule, AppRoutingModule],

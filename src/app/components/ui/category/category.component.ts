@@ -20,10 +20,9 @@ export class CategoryComponent implements AfterViewInit {
   @ViewChild('svg') svgElement!: ElementRef
 
   ngAfterViewInit(): void {
-    this.svgElement.nativeElement.innerHTML = `<title>${
-      this.category.name
-    }</title> ${
-      categorySvg.filter((svg) => svg.name === this.category.id)[0].value
-    }`
+    this.svgElement.nativeElement.innerHTML = `<title>${this.category
+      ?.name}</title> ${categorySvg.filter(
+      (svg) => svg.name === this.category?.id
+    )[0]?.value}`
   }
 }

@@ -54,25 +54,29 @@
         }
       }
 
-      &__stars {
+      &__subtitle {
         @include d-flex(row, 3px);
-        align-self: flex-end;
-        align-items: center;
+        justify-content: space-between;
 
-        &__star {
-          position: relative;
+        &__stars {
+          @include d-flex(row, 3px);
+          align-items: center;
 
-          .star_btm {
-            color: $grey5;
-          }
+          &__star {
+            position: relative;
 
-          .star_top {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: var(--star-percentage);
-            overflow: hidden;
-            // @include prefix(transform, (translateX(58%)));
+            .star_btm {
+              color: $grey5;
+            }
+
+            .star_top {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: var(--star-percentage);
+              overflow: hidden;
+              // @include prefix(transform, (translateX(58%)));
+            }
           }
         }
       }

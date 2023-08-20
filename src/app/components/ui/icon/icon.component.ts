@@ -44,7 +44,7 @@ export class IconComponent
   ngAfterViewInit(): void {
     this.iconElement.nativeElement.innerHTML = `${
       this.title ? `<title>${this.title}</title>` : ''
-    }${innerSvg.filter((svg) => svg.name === this.name)[0].value}`
+    }${innerSvg.filter((svg) => svg.name === this.name)[0]?.value}`
   }
 
   ngOnInit(): void {

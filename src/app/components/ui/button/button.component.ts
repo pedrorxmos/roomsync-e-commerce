@@ -44,7 +44,7 @@ export class ButtonComponent implements OnInit {
       this.className ? this.className : ''
     }`
 
-    this.svgSize = this.size.slice(-2)
+    this.svgSize = this.size?.slice(-2)
   }
 
   onClick() {
