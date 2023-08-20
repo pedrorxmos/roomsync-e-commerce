@@ -18,6 +18,7 @@ describe('ProductCardComponent', () => {
     })
     fixture = TestBed.createComponent(ProductCardComponent)
     component = fixture.componentInstance
+    component.product = product
     fixture.detectChanges()
   })
 
@@ -27,7 +28,6 @@ describe('ProductCardComponent', () => {
 
   it('should show product name and price', () => {
     const compiled = fixture.nativeElement as HTMLElement
-    component.product = product
     fixture.detectChanges()
 
     expect(compiled.querySelector('.product-card')?.textContent).toContain(
@@ -39,7 +39,6 @@ describe('ProductCardComponent', () => {
   })
 
   it('should add to cart', () => {
-    component.product = product
     fixture.detectChanges()
 
     const addToCartBtn = fixture.debugElement.nativeElement.querySelector(
@@ -59,7 +58,6 @@ describe('ProductCardComponent', () => {
   })
 
   it('should add to favorites', () => {
-    component.product = product
     fixture.detectChanges()
 
     component.onLike()
@@ -69,7 +67,6 @@ describe('ProductCardComponent', () => {
 
   it('should render img', () => {
     const compiled = fixture.nativeElement
-    component.product = product
     component.ngOnInit()
     fixture.detectChanges()
 
@@ -83,7 +80,6 @@ describe('ProductCardComponent', () => {
   })
 
   it('should change stars array', () => {
-    component.product = product
     component.ngOnInit()
     fixture.detectChanges()
 

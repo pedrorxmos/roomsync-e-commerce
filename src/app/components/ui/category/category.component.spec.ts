@@ -22,6 +22,7 @@ describe('CategoryComponent', () => {
     })
     fixture = TestBed.createComponent(CategoryComponent)
     component = fixture.componentInstance
+    component.category = category
     fixture.detectChanges()
   })
 
@@ -31,7 +32,6 @@ describe('CategoryComponent', () => {
 
   it('should show title and subtitle', () => {
     const compiled = fixture.nativeElement as HTMLElement
-    component.category = category
     component.ngAfterViewInit()
     fixture.detectChanges()
 
@@ -46,7 +46,6 @@ describe('CategoryComponent', () => {
 
   it('should render svg icon', () => {
     const compiled = fixture.nativeElement as HTMLElement
-    component.category = category
     component.ngAfterViewInit()
     fixture.detectChanges()
 
@@ -57,7 +56,6 @@ describe('CategoryComponent', () => {
 
   it('should redirect to category page', fakeAsync(() => {
     location = TestBed.inject(Location)
-    component.category = category
     component.ngAfterViewInit()
     fixture.detectChanges()
 

@@ -15,17 +15,16 @@ describe('CartItemComponent', () => {
     })
     fixture = TestBed.createComponent(CartItemComponent)
     component = fixture.componentInstance
+    component.product = cartItem
     fixture.detectChanges()
   })
 
   it('should create', () => {
-    component.product = cartItem
     expect(component).toBeTruthy()
   })
 
   it('should show product name, price and qty', () => {
     const compiled = fixture.nativeElement as HTMLElement
-    component.product = cartItem
     component.ngOnInit()
     fixture.detectChanges()
     expect(
@@ -43,7 +42,6 @@ describe('CartItemComponent', () => {
 
   it('should show item subtotal due to price and qty', () => {
     const compiled = fixture.nativeElement as HTMLElement
-    component.product = cartItem
     component.ngOnInit()
     fixture.detectChanges()
 
@@ -54,7 +52,6 @@ describe('CartItemComponent', () => {
 
   it('should load item image', () => {
     const compiled = fixture.nativeElement
-    component.product = cartItem
     component.ngOnInit()
     fixture.detectChanges()
 

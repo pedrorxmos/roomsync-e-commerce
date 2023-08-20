@@ -1,19 +1,19 @@
 <button [class]="'product-card ' + className">
   <button
     class="product-card-info"
-    [routerLink]="'/product/' + product?.id"
+    [routerLink]="'/product/' + product.id"
     [disabled]="disabled"
   >
     <img
       [src]="imgUrl"
-      [alt]="product?.name"
+      [alt]="product.name"
       class="product-card-info__img"
       draggable="false"
     />
-    <h4 class="product-card-info__title">{{ product?.name }}</h4>
+    <h4 class="product-card-info__title">{{ product.name }}</h4>
     <div class="product-card-info__subtitle">
       <span class="product-card-info__subtitle__price"
-        >{{ product?.price }} $</span
+        >{{ product.price }} $</span
       >
       <div
         class="product-card-info__subtitle__stars product-card-info__subtitle__stars__long"
@@ -76,7 +76,7 @@
       <div
         class="product-card-info__subtitle__stars product-card-info__subtitle__stars__short"
       >
-        <small>{{ product?.stars }}/5</small>
+        <small>{{ product.stars }}/5</small>
         <div class="product-card-info__subtitle__stars__star">
           <app-icon name="star" size="sm" class="star_btm"></app-icon>
           <app-icon
@@ -84,7 +84,7 @@
             size="sm"
             fill="orange"
             class="star_top"
-            [style]="'--star-percentage: ' + (product?.stars / 5) * 21 + 'px'"
+            [style]="'--star-percentage: ' + (product.stars / 5) * 21 + 'px'"
           ></app-icon>
         </div>
       </div>
