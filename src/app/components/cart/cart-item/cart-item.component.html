@@ -3,10 +3,10 @@
     <button class="cart-item__header__remove" (click)="onRemove()">
       <app-icon name="x" size="sm" />
     </button>
-    <img [src]="imgUrl" [alt]="product.name" class="cart-item__header__img" />
+    <img [src]="imgUrl" [alt]="product?.name" class="cart-item__header__img" />
     <div class="cart-item__header__info">
-      <span class="title">{{ product.name }}</span>
-      <span>{{ product.price | number: '1.2-2' }} $</span>
+      <span class="title">{{ product?.name }}</span>
+      <span>{{ product?.price | number: '1.2-2' }} $</span>
     </div>
   </div>
 
@@ -14,23 +14,23 @@
     <div class="cart-item__actions__qty">
       <button
         class="cart-item__actions__qty__btn cart-item__actions__qty__btn-minus"
-        (click)="onInputQty(product.qty - 1)"
-        [disabled]="product.qty <= 1"
+        (click)="onInputQty(product?.qty - 1)"
+        [disabled]="product?.qty <= 1"
       >
         <app-icon size="sm" name="minus" />
       </button>
-      <span>{{ product.qty }}</span>
+      <span>{{ product?.qty }}</span>
       <button
         class="cart-item__actions__qty__btn cart-item__actions__qty__btn-plus"
-        (click)="onInputQty(product.qty + 1)"
-        [disabled]="product.qty >= 20"
+        (click)="onInputQty(product?.qty + 1)"
+        [disabled]="product?.qty >= 20"
       >
         <app-icon size="sm" name="plus" />
       </button>
     </div>
 
     <span class="cart-item__actions__price">
-      {{ product.price * product.qty | number: '1.2-2' }} $
+      {{ product?.price * product?.qty | number: '1.2-2' }} $
     </span>
   </div>
 </div>

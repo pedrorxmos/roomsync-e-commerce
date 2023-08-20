@@ -1,21 +1,23 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { DropdownComponent } from './dropdown.component';
+import { DropdownComponent } from './dropdown.component'
+import { AppModule } from 'src/app/app.module'
 
 describe('DropdownComponent', () => {
-  let component: DropdownComponent;
-  let fixture: ComponentFixture<DropdownComponent>;
+  let component: DropdownComponent
+  let fixture: ComponentFixture<DropdownComponent>
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [DropdownComponent]
-    });
-    fixture = TestBed.createComponent(DropdownComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+      declarations: [DropdownComponent],
+      imports: [AppModule]
+    })
+    fixture = TestBed.createComponent(DropdownComponent)
+    component = fixture.componentInstance
+    fixture.detectChanges()
+  })
 
   it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+    expect(component).toBeTruthy()
+  })
+})

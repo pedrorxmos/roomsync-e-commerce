@@ -1,21 +1,23 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { ProductFilterComponent } from './product-filter.component';
+import { ProductFilterComponent } from './product-filter.component'
+import { AppModule } from 'src/app/app.module'
 
 describe('ProductFilterComponent', () => {
-  let component: ProductFilterComponent;
-  let fixture: ComponentFixture<ProductFilterComponent>;
+  let component: ProductFilterComponent
+  let fixture: ComponentFixture<ProductFilterComponent>
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ProductFilterComponent]
-    });
-    fixture = TestBed.createComponent(ProductFilterComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+      declarations: [ProductFilterComponent],
+      imports: [AppModule]
+    })
+    fixture = TestBed.createComponent(ProductFilterComponent)
+    component = fixture.componentInstance
+    fixture.detectChanges()
+  })
 
   it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+    expect(component).toBeTruthy()
+  })
+})
