@@ -20,4 +20,17 @@ describe('TopbarComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy()
   })
+
+  it('should render both titles (sm & lg)', () => {
+    const compiled = fixture.nativeElement as HTMLElement
+    expect(compiled.querySelector('.topbar')?.textContent).toContain('RoomSync')
+    expect(compiled.querySelector('.topbar')?.textContent).toContain('RS')
+  })
+
+  it('should render search bar', () => {
+    const compiled = fixture.nativeElement as HTMLElement
+    expect(compiled.querySelector('.topbar')?.innerHTML).toContain(
+      'topbar-search'
+    )
+  })
 })
