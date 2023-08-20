@@ -8,7 +8,7 @@ export const product = {
   category: 'furniture',
   subcategory: 'chairs',
   price: 59.99,
-  stars: 3.2,
+  stars: 4.2,
   color: ['grey', 'brown'],
   material: ['wood'],
   info: {

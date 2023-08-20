@@ -1,9 +1,9 @@
 export const cartStorage = [
   {
-    name: 'Green Cactus Vase',
-    id: 'green-cactus-vase',
-    price: 15.99,
-    subcategory: 'bowls-vases',
+    id: 'grey-wood-chair',
+    name: 'Grey Wood Chair',
+    subcategory: 'chairs',
+    price: 59.99,
     qty: 1
   }
 ]
@@ -26,9 +26,9 @@ export const cartStorageMultipleItems = [
 ]
 
 export const cartItem = {
-  name: 'Green Cactus Vase',
-  id: 'green-cactus-vase',
-  price: 15.99,
-  subcategory: 'bowls-vases',
+  id: 'grey-wood-chair',
+  name: 'Grey Wood Chair',
+  subcategory: 'chairs',
+  price: 59.99,
   qty: 1
 }

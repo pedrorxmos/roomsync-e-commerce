@@ -9,61 +9,63 @@
             {{ product?.subcategory }}
           </a>
         </div>
+        <div class="product-detail__info__header__subtitle">
+          <span class="text-big">{{ product?.price | number: '1.2-2' }} $</span>
+          <div class="product-detail__info__header__subtitle__stars">
+            <div class="product-detail__info__header__subtitle__stars__star">
+              <app-icon name="star" size="sm" class="star_btm"></app-icon>
+              <app-icon
+                name="star"
+                size="sm"
+                fill="orange"
+                class="star_top"
+                [style]="'--star-percentage: ' + stars[0] * 21 + 'px'"
+              ></app-icon>
+            </div>
 
-        <div class="product-detail__info__header__stars">
-          <div class="product-detail__info__header__stars__star">
-            <app-icon name="star" size="sm" class="star_btm"></app-icon>
-            <app-icon
-              name="star"
-              size="sm"
-              fill="orange"
-              class="star_top"
-              [style]="'--star-percentage: ' + stars[0] * 21 + 'px'"
-            ></app-icon>
-          </div>
+            <div class="product-detail__info__header__subtitle__stars__star">
+              <app-icon name="star" size="sm" class="star_btm"></app-icon>
+              <app-icon
+                name="star"
+                size="sm"
+                fill="orange"
+                class="star_top"
+                [style]="'--star-percentage: ' + stars[1] * 21 + 'px'"
+              ></app-icon>
+            </div>
 
-          <div class="product-detail__info__header__stars__star">
-            <app-icon name="star" size="sm" class="star_btm"></app-icon>
-            <app-icon
-              name="star"
-              size="sm"
-              fill="orange"
-              class="star_top"
-              [style]="'--star-percentage: ' + stars[1] * 21 + 'px'"
-            ></app-icon>
-          </div>
+            <div class="product-detail__info__header__subtitle__stars__star">
+              <app-icon name="star" size="sm" class="star_btm"></app-icon>
+              <app-icon
+                name="star"
+                size="sm"
+                fill="orange"
+                class="star_top"
+                [style]="'--star-percentage: ' + stars[2] * 21 + 'px'"
+              ></app-icon>
+            </div>
 
-          <div class="product-detail__info__header__stars__star">
-            <app-icon name="star" size="sm" class="star_btm"></app-icon>
-            <app-icon
-              name="star"
-              size="sm"
-              fill="orange"
-              class="star_top"
-              [style]="'--star-percentage: ' + stars[2] * 21 + 'px'"
-            ></app-icon>
-          </div>
+            <div class="product-detail__info__header__subtitle__stars__star">
+              <app-icon name="star" size="sm" class="star_btm"></app-icon>
+              <app-icon
+                name="star"
+                size="sm"
+                fill="orange"
+                class="star_top"
+                [style]="'--star-percentage: ' + stars[3] * 21 + 'px'"
+              ></app-icon>
+            </div>
 
-          <div class="product-detail__info__header__stars__star">
-            <app-icon name="star" size="sm" class="star_btm"></app-icon>
-            <app-icon
-              name="star"
-              size="sm"
-              fill="orange"
-              class="star_top"
-              [style]="'--star-percentage: ' + stars[3] * 21 + 'px'"
-            ></app-icon>
-          </div>
-
-          <div class="product-detail__info__header__stars__star">
-            <app-icon name="star" size="sm" class="star_btm"></app-icon>
-            <app-icon
-              name="star"
-              size="sm"
-              fill="orange"
-              class="star_top"
-              [style]="'--star-percentage: ' + stars[4] * 21 + 'px'"
-            ></app-icon>
+            <div class="product-detail__info__header__subtitle__stars__star">
+              <app-icon name="star" size="sm" class="star_btm"></app-icon>
+              <app-icon
+                name="star"
+                size="sm"
+                fill="orange"
+                class="star_top"
+                [style]="'--star-percentage: ' + stars[4] * 21 + 'px'"
+              ></app-icon>
+            </div>
           </div>
         </div>
       </header>
@@ -91,7 +93,7 @@
           ></app-button>
           <div class="product-detail__info__actions__qty">
             <button
-              class="product-detail__info__actions__qty__btn"
+              class="product-detail__info__actions__qty__btn minus"
               (click)="modifyQty(-1)"
               [disabled]="qty <= 1"
             >
@@ -109,7 +111,7 @@
               (input)="onInputQty(+qtyInput.value)"
             />
             <button
-              class="product-detail__info__actions__qty__btn"
+              class="product-detail__info__actions__qty__btn plus"
               (click)="modifyQty(1)"
               [disabled]="qty >= 20"
             >
