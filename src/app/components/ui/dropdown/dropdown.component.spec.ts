@@ -45,8 +45,6 @@ describe('DropdownComponent', () => {
     const compiled = testFixture.debugElement.nativeElement as HTMLElement
     testFixture.detectChanges()
 
-    console.log(compiled)
-
     const btn =
       testFixture.debugElement.nativeElement.querySelector('.dropdown-header')
     btn.click()
