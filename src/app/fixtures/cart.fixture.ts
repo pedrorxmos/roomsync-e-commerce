@@ -24,3 +24,11 @@ export const cartStorageMultipleItems = [
     qty: 1
   }
 ]
+
+export const cartItem = {
+  name: 'Green Cactus Vase',
+  id: 'green-cactus-vase',
+  price: 15.99,
+  subcategory: 'bowls-vases',
+  qty: 1
+}

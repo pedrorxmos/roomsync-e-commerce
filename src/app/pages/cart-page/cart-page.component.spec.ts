@@ -29,6 +29,7 @@ describe('CartPageComponent', () => {
   })
 
   it('should create', () => {
+    localStorage.setItem('cart', JSON.stringify(cartStorage))
     expect(component).toBeTruthy()
   })
 
@@ -60,6 +61,7 @@ describe('CartPageComponent', () => {
   })
 
   it('should change route on checkout', () => {
+    localStorage.setItem('cart', JSON.stringify(cartStorage))
     const navigateByUrlSpy = spyOn(router, 'navigateByUrl')
     component.onRemoveAll()
 
