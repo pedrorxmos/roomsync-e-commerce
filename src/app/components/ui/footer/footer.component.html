@@ -1,4 +1,24 @@
 <footer class="footer">
+  <div class="newsletter-notice">
+    <div class="newsletter-notice__overlay"></div>
+    <div class="newsletter-notice__alert">
+      <button class="newsletter-notice__alert__close">
+        <app-icon name="x" size="md" />
+      </button>
+      <header class="newsletter-notice__alert__header">
+        <h3>Thank you for subscribing to our newsletter!</h3>
+        <span
+          >We've sent you an email confirmation to
+          <span #emailNewsletter>email@email</span> *</span
+        >
+      </header>
+      <app-button type="primary" size="dsm">Confirm</app-button>
+      <small class="newsletter-notice__alert__extra">
+        * You will not receive any email and your email will not be saved in any
+        type of data base. This is just a practice project.
+      </small>
+    </div>
+  </div>
   <div class="footer-container">
     <section class="footer-section footer-copyright">
       <header class="copyright-header">
