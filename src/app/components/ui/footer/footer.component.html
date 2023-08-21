@@ -1,18 +1,23 @@
 <footer class="footer">
-  <div class="newsletter-notice">
-    <div class="newsletter-notice__overlay"></div>
+  <div #notice class="newsletter-notice">
+    <div class="newsletter-notice__overlay" (click)="onNewsletterClose()"></div>
     <div class="newsletter-notice__alert">
-      <button class="newsletter-notice__alert__close">
+      <button
+        class="newsletter-notice__alert__close"
+        (click)="onNewsletterClose()"
+      >
         <app-icon name="x" size="md" />
       </button>
       <header class="newsletter-notice__alert__header">
         <h3>Thank you for subscribing to our newsletter!</h3>
         <span
           >We've sent you an email confirmation to
-          <span #emailNewsletter>email@email</span> *</span
+          <span #emailNewsletter>{{ emailSent }}</span> *</span
         >
       </header>
-      <app-button type="primary" size="dsm">Confirm</app-button>
+      <app-button type="primary" size="dsm" (click)="onNewsletterClose()"
+        >Confirm</app-button
+      >
       <small class="newsletter-notice__alert__extra">
         * You will not receive any email and your email will not be saved in any
         type of data base. This is just a practice project.
@@ -56,16 +61,25 @@
       >
     </section>
     <section class="footer-section footer-newsletter">
-      <label for="newsletter" class="newsletter-title"
-        >Subscribe to our newsletter</label
-      >
-      <input
-        type="text"
-        name="newsletter"
-        id="newsletter"
-        class="newsletter-input"
-        placeholder="Your email"
-      />
+      <form #form (submit)="onNewsletterOpen(); $event.preventDefault()">
+        <label for="newsletter" class="newsletter-title"
+          >Subscribe to our newsletter</label
+        >
+
+        <div class="newsletter-group">
+          <input
+            #input
+            type="text"
+            name="newsletter"
+            id="newsletter"
+            class="newsletter-input"
+            placeholder="Your email"
+          />
+          <button type="submit" class="newsletter-submit">Go!</button>
+        </div>
+
+        <small #error class="newsletter-error">Email not valid</small>
+      </form>
     </section>
     <nav class="footer-section footer-nav">
       <ul class="nav-list">
