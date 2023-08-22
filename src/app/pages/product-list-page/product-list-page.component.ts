@@ -34,6 +34,8 @@ export class ProductListPageComponent implements OnInit, AfterContentChecked {
   ) {}
 
   ngOnInit(): void {
+    this.pageTitle = 'Shop All'
+    this.products = productsDB
     this.route.params.subscribe(
       (params) => (this.categoryId = params['category'])
     )
@@ -73,6 +75,38 @@ export class ProductListPageComponent implements OnInit, AfterContentChecked {
   }
 
   ngAfterContentChecked(): void {
+    this.pageTitle = 'Shop All'
+    this.products = productsDB
+    this.route.params.subscribe(
+      (params) => (this.categoryId = params['category'])
+    )
+
+    this.pageName = this.route.routeConfig?.path || ''
+
+    if (this.categoryId) {
+      this.category = categoriesDB.filter(
+        (cat) => cat.id === this.categoryId
+      )[0].name
+
+      this.pageTitle = this.category
+
+      this.products = this.products.filter(
+        (prod) => prod.subcategory === this.categoryId
+      )
+    }
+
+    if (this.pageName === 'favorites') {
+      this.products = getFavorites()
+      this.pageTitle = 'Favorites'
+    }
+
+    this.checkSearchParam()
+
+    this.initialProducts = [...this.products]
+
+    this.colorFilterOptions = colorFilter(this.products)
+    this.materialFilterOptions = materialFilter(this.products)
+
     this.route.queryParams.subscribe((params) => {
       this.applyFilters({
         color: params['color'],
