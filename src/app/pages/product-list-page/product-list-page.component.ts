@@ -17,7 +17,7 @@ import { getFavorites } from 'src/app/helpers'
   templateUrl: './product-list-page.component.html',
   styleUrls: ['./product-list-page.component.scss']
 })
-export class ProductListPageComponent implements OnInit {
+export class ProductListPageComponent implements OnInit, AfterContentChecked {
   private categoryId?: string
   public category?: string
   public products: Product[] = productsDB as Product[]
@@ -51,6 +51,8 @@ export class ProductListPageComponent implements OnInit {
 
     if (this.pageName === 'favorites') this.products = getFavorites()
 
+    this.checkSearchParam()
+
     this.initialProducts = [...this.products]
 
     this.colorFilterOptions = colorFilter(this.products)
@@ -61,6 +63,25 @@ export class ProductListPageComponent implements OnInit {
         color: params['color'],
         material: params['material']
       })
+    })
+  }
+
+  ngAfterContentChecked(): void {
+    this.route.queryParams.subscribe((params) => {
+      this.applyFilters({
+        color: params['color'],
+        material: params['material']
+      })
+    })
+  }
+
+  checkSearchParam() {
+    this.route.queryParams.subscribe((params) => {
+      if (params['search']) {
+        this.products = this.products.filter((prod: Product) =>
+          prod.name.toLowerCase().includes(params['search'].toLowerCase())
+        )
+      }
     })
   }
 
