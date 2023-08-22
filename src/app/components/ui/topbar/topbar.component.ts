@@ -15,6 +15,7 @@ import {
 export class TopbarComponent implements AfterContentChecked {
   @ViewChild('searchBar') private searchBar!: ElementRef
   @ViewChild('searchInput') private searchInput!: ElementRef
+  @ViewChild('overlay') private overlay!: ElementRef
 
   public cartProducts: number = getCartQtyLength()
   public favorites: number = getFavorites().length
@@ -23,6 +24,14 @@ export class TopbarComponent implements AfterContentChecked {
 
   onToggleSearch() {
     this.searchBar.nativeElement.classList.toggle('open')
+    this.overlay.nativeElement.classList.toggle('open')
+    this.searchInput.nativeElement.focus()
+  }
+
+  onCloseSearch() {
+    this.searchBar.nativeElement.classList.remove('open')
+    this.overlay.nativeElement.classList.remove('open')
+    this.searchInput.nativeElement.blur()
   }
 
   onSearchSubmit() {
@@ -31,9 +40,8 @@ export class TopbarComponent implements AfterContentChecked {
         search: this.searchInput.nativeElement.value
       }
     })
-
+    this.onCloseSearch()
     this.searchBar.nativeElement.reset()
-    this.searchInput.nativeElement.blur()
   }
 
   ngAfterContentChecked(): void {
