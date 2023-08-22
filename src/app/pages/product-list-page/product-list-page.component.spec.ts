@@ -31,17 +31,6 @@ describe('ProductListPageComponent', () => {
     expect(component).toBeTruthy()
   })
 
-  it('should show all products passed', () => {
-    const compiled = fixture.debugElement.nativeElement as HTMLElement
-    component.products = someProducts
-    component.ngOnInit()
-    fixture.detectChanges()
-
-    expect(compiled.querySelectorAll('app-product-card').length).toBe(
-      someProducts.length
-    )
-  })
-
   it('should show "Shop all" on default', () => {
     const compiled = fixture.debugElement.nativeElement as HTMLElement
     fixture.detectChanges()

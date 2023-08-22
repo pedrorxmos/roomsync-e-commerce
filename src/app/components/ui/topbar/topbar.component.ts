@@ -13,9 +13,9 @@ import {
   styleUrls: ['./topbar.component.scss']
 })
 export class TopbarComponent implements AfterContentChecked {
-  @ViewChild('searchBar') private searchBar!: ElementRef
-  @ViewChild('searchInput') private searchInput!: ElementRef
-  @ViewChild('overlay') private overlay!: ElementRef
+  @ViewChild('searchBar') public searchBar!: ElementRef
+  @ViewChild('searchInput') public searchInput!: ElementRef
+  @ViewChild('overlay') public overlay!: ElementRef
 
   public cartProducts: number = getCartQtyLength()
   public favorites: number = getFavorites().length
