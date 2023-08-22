@@ -5,16 +5,15 @@
 
 <br>
 
-<div align="center">
-  <hr />
-  <h1> 🚧  WORK IN PROGRESS 🚧  </h1>
-</div>
-
 ## Details
 
 This project is made with:
 - [Angular](https://angular.io/)
 - [Sass (scss)](https://sass-lang.com/)
+
+## Preview
+
+![Desktop Preview](./src/assets/img/preview.webp)
 
 
 ## Installation
