@@ -2,13 +2,7 @@
   <section class="main-section">
     <header class="section-header list-header">
       <h2>
-        {{
-          pageName === 'favorites'
-            ? 'Your favorites'
-            : category
-            ? category
-            : 'Shop All'
-        }}
+        {{ pageTitle }}
       </h2>
       <div class="header-filters">
         <app-product-filter

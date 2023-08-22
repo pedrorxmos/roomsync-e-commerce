@@ -4,7 +4,12 @@
       <span class="topbar-logo__lg">RoomSync</span>
       <span class="topbar-logo__sm">RS</span>
     </span>
-    <div #searchBar class="topbar-search">
+    <form
+      (submit)="onSearchSubmit(); $event.preventDefault()"
+      #searchBar
+      class="topbar-search"
+      autocomplete="off"
+    >
       <label for="search" class="search-wrapper">
         <app-icon name="search" size="sm" class="search-icon" />
         <input
@@ -16,7 +21,7 @@
           placeholder="Search..."
         />
       </label>
-    </div>
+    </form>
     <nav class="topbar-nav">
       <ul class="nav-list">
         <li
@@ -67,3 +72,4 @@
     </nav>
   </div>
 </header>
+<div #overlay class="search-overlay" (click)="onCloseSearch()"></div>

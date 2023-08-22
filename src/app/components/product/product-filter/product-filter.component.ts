@@ -7,13 +7,14 @@ import {
   EventEmitter
 } from '@angular/core'
 import { ActivatedRoute, Event } from '@angular/router'
+import { AfterContentChecked, OnInit } from '@angular/core'
 
 @Component({
   selector: 'app-product-filter',
   templateUrl: './product-filter.component.html',
   styleUrls: ['./product-filter.component.scss']
 })
-export class ProductFilterComponent {
+export class ProductFilterComponent implements OnInit, AfterContentChecked {
   @Input({ required: true })
   public title: string = 'filter'
 
@@ -35,6 +36,11 @@ export class ProductFilterComponent {
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
+    this.options = this.values?.filter((x) => x !== this.selectedOption)
+    this.setFilterActive()
+  }
+
+  ngAfterContentChecked(): void {
     this.options = this.values?.filter((x) => x !== this.selectedOption)
     this.setFilterActive()
   }
