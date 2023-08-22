@@ -61,7 +61,11 @@
       >
     </section>
     <section class="footer-section footer-newsletter">
-      <form #form (submit)="onNewsletterOpen(); $event.preventDefault()">
+      <form
+        #form
+        (submit)="onNewsletterOpen(); $event.preventDefault()"
+        autocomplete="off"
+      >
         <label for="newsletter" class="newsletter-title"
           >Subscribe to our newsletter</label
         >
