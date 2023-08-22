@@ -26,6 +26,7 @@ export class ProductListPageComponent implements OnInit, AfterContentChecked {
 
   public colorFilterOptions: Color[] = []
   public materialFilterOptions: Material[] = []
+  public pageTitle: string = 'Shop All'
 
   constructor(
     private route: ActivatedRoute,
@@ -44,12 +45,17 @@ export class ProductListPageComponent implements OnInit, AfterContentChecked {
         (cat) => cat.id === this.categoryId
       )[0].name
 
+      this.pageTitle = this.category
+
       this.products = this.products.filter(
         (prod) => prod.subcategory === this.categoryId
       )
     }
 
-    if (this.pageName === 'favorites') this.products = getFavorites()
+    if (this.pageName === 'favorites') {
+      this.products = getFavorites()
+      this.pageTitle = 'Favorites'
+    }
 
     this.checkSearchParam()
 
@@ -81,6 +87,8 @@ export class ProductListPageComponent implements OnInit, AfterContentChecked {
         this.products = this.products.filter((prod: Product) =>
           prod.name.toLowerCase().includes(params['search'].toLowerCase())
         )
+
+        this.pageTitle = `Search for "${params['search']}"`
       }
     })
   }
