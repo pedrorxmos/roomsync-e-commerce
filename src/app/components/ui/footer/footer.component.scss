@@ -7,6 +7,75 @@
   width: 100%;
   color: $white;
 
+  .newsletter-notice {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+    z-index: -1;
+    @include d-flex();
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    pointer-events: none;
+    @include prefix(transition, (opacity 0.3s));
+
+    &.open {
+      opacity: 1;
+      z-index: 1000;
+      pointer-events: all;
+    }
+
+    &__overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100dvw;
+      height: 100dvh;
+      background-color: rgba($black, 0.1);
+      z-index: inherit;
+    }
+
+    &__alert {
+      z-index: inherit;
+      max-width: 400px;
+      padding: 24px;
+      @include d-flex(column, 16px);
+      justify-content: center;
+      align-items: center;
+      background-color: $pure-white;
+      color: $black;
+      text-align: center;
+      box-shadow: 1px 4px 10px rgba($black, 0.1);
+      border-radius: 28px;
+
+      @include mq(min-width, $small-card-max-mq) {
+        padding-bottom: 24px;
+        border-radius: 38px;
+      }
+
+      @include mq(min-width, $medium-card-max-mq) {
+        padding-bottom: 48px;
+        border-radius: 48px;
+      }
+
+      &__close {
+        background: none;
+        padding: 0;
+        border: none;
+        align-self: flex-end;
+        color: $black;
+        cursor: pointer;
+      }
+
+      &__header {
+        @include d-flex(column, 16px);
+      }
+    }
+  }
+
   .footer-container {
     @include d-flex(column, 32px);
     justify-content: space-between;
@@ -50,6 +119,45 @@
       }
 
       &.footer-newsletter {
+        form {
+          @include d-flex(column, 8px);
+          justify-content: center;
+          align-items: center;
+        }
+
+        .newsletter-group {
+          @include d-flex(row, 4px);
+          justify-content: center;
+          align-items: center;
+        }
+
+        .newsletter-error {
+          color: darken($red, 10);
+          font-weight: 600;
+          background-color: $grey5;
+          padding: 4px 8px;
+          border-radius: 24px;
+          display: none;
+
+          &.error {
+            display: block;
+          }
+        }
+
+        .newsletter-submit {
+          @include d-flex(row, 0.5rem);
+          text-decoration: none;
+          justify-content: center;
+          align-items: center;
+          font-family: $font-family;
+          border: 2px solid $ash1;
+          border-radius: 24px;
+          cursor: pointer;
+          background-color: $ash2;
+          color: $white;
+          font-size: size(md);
+          padding: 10px 12px;
+        }
         .newsletter-input {
           color: $pure-white;
           background-color: darken($ash2, 3);
@@ -57,7 +165,7 @@
           max-width: 320px;
           padding: 10px 12px;
           border: none;
-          border-radius: 36px;
+          border-radius: 24px;
           text-align: center;
           font-family: $font-family;
           font-size: size(md);
