@@ -1,9 +1,9 @@
 
  <div align="center" valign="center">
   <h1 valign="center"> 
-    <img src="/favicon-16x16.png" alt="icon"/>
+    <img src="/src/favicon-16x16.png" alt="icon"/>
     RoomSync
-    <img src="/favicon-16x16.png" alt="icon"/>
+    <img src="/src/favicon-16x16.png" alt="icon"/>
   </h1> 
   Designed & coded with ♥ by Pedro Ramos
   <br><br>
